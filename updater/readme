@@ -1,0 +1,36 @@
+====================== 
+Running the Webserver
+======================
+
+Prerequisites
+---------------------
+
++ Python 2.6
+
++ Python's MySQLdb module
+  
+  * sudo apt-get install python-mysqldb
+
++ Python's dateutil module
+  
+  * sudo apt-get install python-dateutil
+
++ MySQL 5.0
+
+  * sudo apt-get install mysql-server-5.0
+
++ Solr 1.4
+  
+  * running locally on default port (8983); java -jar start.jar
+
+
+Running Instructions
+---------------------
+
++ Run createschema.sql
+
+  * mysql [dbname] < createschema.sql
+
++ Start webserver
+
+  * python webserver.py

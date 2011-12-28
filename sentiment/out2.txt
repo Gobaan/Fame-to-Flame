@@ -1,0 +1,4865 @@
+POLARITY DEMO
+  Data Directory=reviews
+Length: 2076
+Length: 555
+    #Tokens=53066
+      the=30669
+      and=17301
+      to=16662
+      a=15274
+      <br=14915
+      I=13739
+      of=11357
+      is=9948
+      it=7387
+      in=6843
+      that=6828
+      />=6638
+      you=6561
+      for=6421
+      with=5357
+      this=5236
+      on=4527
+      have=4472
+      was=3922
+      my=3853
+      are=3693
+      as=3571
+      but=3531
+      The=3402
+      not=3227
+      be=2838
+      can=2438
+      so=2228
+      or=2176
+      at=2144
+      your=2107
+      all=2063
+      just=1952
+      one=1918
+      like=1915
+      from=1881
+      has=1799
+      an=1796
+      game=1787
+      more=1785
+      get=1778
+      will=1705
+      if=1692
+      about=1648
+      out=1641
+      they=1592
+      up=1575
+      had=1515
+      than=1500
+      would=1487
+      very=1416
+      when=1416
+      It=1381
+      -=1361
+      This=1248
+      by=1229
+      no=1213
+      only=1193
+      me=1189
+      really=1158
+      some=1143
+      even=1138
+      much=1134
+      do=1114
+      it's=1080
+      what=1065
+      don't=1059
+      other=1059
+      games=1051
+      great=1050
+      because=1047
+      which=1045
+      new=1031
+      good=1000
+      first=969
+      also=968
+      them=949
+      there=948
+      time=941
+      been=931
+      her=918
+      use=908
+      how=901
+      I'm=895
+      into=888
+      any=881
+      it.=872
+      who=857
+      these=850
+      their=837
+      />The=803
+      she=791
+      am=774
+      over=773
+      If=760
+      play=756
+      love=751
+      I've=738
+      You=734
+      Wii=726
+      after=719
+      book=717
+      were=707
+      little=706
+      could=702
+      want=693
+      its=689
+      />I=684
+      still=681
+      best=671
+      make=671
+      Bella=658
+      2=656
+      then=651
+      many=650
+      better=649
+      most=648
+      read=640
+      does=631
+      well=629
+      PS3=609
+      buy=609
+      way=601
+      think=598
+      he=588
+      never=588
+      got=580
+      back=576
+      go=576
+      we=573
+      see=572
+      two=569
+      now=552
+      his=551
+      sound=548
+      It's=545
+      few=544
+      need=542
+      used=541
+      know=539
+      And=536
+      controller=527
+      PSP=521
+      say=521
+      But=520
+      every=520
+      through=514
+      did=511
+      bought=510
+      off=504
+      people=500
+      too=495
+      while=494
+      same=493
+      without=487
+      find=483
+      A=477
+      should=476
+      where=473
+      can't=471
+      being=466
+      own=460
+      work=457
+      old=456
+      around=454
+      Edward=452
+      3=451
+      battery=448
+      take=445
+      before=442
+      since=441
+      going=440
+      lot=439
+      those=438
+      system=431
+      doesn't=422
+      thing=421
+      using=420
+      actually=415
+      didn't=414
+      put=414
+      In=409
+      books=408
+      ever=406
+      There=404
+      you're=403
+      hard=401
+      quality=399
+      something=399
+      long=397
+      fun=395
+      So=394
+      feel=394
+      things=390
+      makes=389
+      bit=388
+      easy=385
+      look=385
+      made=385
+      playing=385
+  Evaluating fold=0
+    Training. Fold= 1 2 3 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=262
+Total Correct=235
+Total Accuracy=0.8969465648854962
+95% Confidence Interval=0.8969465648854962 +/- 0.03681458825732257
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,206,1
+  false,26,29
+Macro-averaged Precision=0.9272988505747126
+Macro-averaged Recall=0.7612209046991656
+Macro-averaged F=0.8104247621599892
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=524
+  True Positive=235
+  False Negative=27
+  False Positive=27
+  True Negative=235
+  Positive Reference=262
+  Positive Response=262
+  Negative Reference=262
+  Negative Response=262
+  Accuracy=0.8969465648854962
+  Recall=0.8969465648854962
+  Precision=0.8969465648854962
+  Rejection Recall=0.8969465648854962
+  Rejection Precision=0.8969465648854962
+  F(1)=0.8969465648854962
+  Fowlkes-Mallows=262.0
+  Jaccard Coefficient=0.8131487889273357
+  Yule's Q=0.9739428816527862
+  Yule's Y=0.7938931297709924
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7938931297709924
+  kappa Unbiased=0.7938931297709924
+  kappa No Prevalence=0.7938931297709924
+  chi Squared=330.25954198473283
+  phi Squared=0.6302663014975818
+  Accuracy Deviation=0.013281553573134404
+Random Accuracy=0.7236466406386576
+Random Accuracy Unbiased=0.72819911427073
+kappa=0.6270954138112808
+kappa Unbiased=0.6208495243199788
+kappa No Prevalence =0.7938931297709924
+Reference Entropy=0.741336801361051
+Response Entropy=0.5133531208586247
+Cross Entropy=0.7949457162325801
+Joint Entropy=0.9856673140179427
+Conditional Entropy=0.24433051265689174
+Mutual Information=0.26902260820173285
+Kullback-Liebler Divergence=0.05360891487152922
+chi Squared=116.97712315559392
+chi-Squared Degrees of Freedom=1
+phi Squared=0.44647756929616
+Cramer's V=0.6681897704216669
+lambda A=0.509090909090909
+lambda B=0.1
+Average Reference Rank=NaN
+Average Score Reference=-1.6815960825158716
+Average Conditional Probability Reference=0.8961609433593288
+Average Log2 Joint Probability Reference=-2674.5817111224537
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=262
+  True Positive=206
+  False Negative=1
+  False Positive=26
+  True Negative=29
+  Positive Reference=207
+  Positive Response=232
+  Negative Reference=55
+  Negative Response=30
+  Accuracy=0.8969465648854962
+  Recall=0.9951690821256038
+  Precision=0.8879310344827587
+  Rejection Recall=0.5272727272727272
+  Rejection Precision=0.9666666666666667
+  F(1)=0.9384965831435079
+  Fowlkes-Mallows=219.1437884129961
+  Jaccard Coefficient=0.8841201716738197
+  Yule's Q=0.9913333333333333
+  Yule's Y=0.8762233828833822
+  Reference Likelihood=0.7900763358778626
+  Response Likelihood=0.8854961832061069
+  Random Accuracy=0.7236466406386575
+  Random Accuracy Unbiased=0.72819911427073
+  kappa=0.6270954138112809
+  kappa Unbiased=0.6208495243199788
+  kappa No Prevalence=0.7938931297709924
+  chi Squared=116.97712315559392
+  phi Squared=0.44647756929616
+  Accuracy Deviation=0.018782953192511515
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.004830917874396135,0.9951690821256038
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6516878772293344,-1.989570784950057
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9951683363506586,0.004831663649341512
+Average Joint Probability Histogram=
+  true,false
+  -2619.751410464957,-3110.758621393543
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=262
+  True Positive=29
+  False Negative=26
+  False Positive=1
+  True Negative=206
+  Positive Reference=55
+  Positive Response=30
+  Negative Reference=207
+  Negative Response=232
+  Accuracy=0.8969465648854962
+  Recall=0.5272727272727272
+  Precision=0.9666666666666667
+  Rejection Recall=0.9951690821256038
+  Rejection Precision=0.8879310344827587
+  F(1)=0.6823529411764705
+  Fowlkes-Mallows=40.620192023179804
+  Jaccard Coefficient=0.5178571428571429
+  Yule's Q=0.9913333333333333
+  Yule's Y=0.8762233828833822
+  Reference Likelihood=0.2099236641221374
+  Response Likelihood=0.11450381679389313
+  Random Accuracy=0.7236466406386576
+  Random Accuracy Unbiased=0.72819911427073
+  kappa=0.6270954138112808
+  kappa Unbiased=0.6208495243199788
+  kappa No Prevalence=0.7938931297709924
+  chi Squared=116.97712315559392
+  phi Squared=0.44647756929616
+  Accuracy Deviation=0.018782953192511515
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5272727272727272,0.4727272727272727
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8464953564352165,-1.794159691503382
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4764668811716759,0.5235331188283241
+Average Joint Probability Histogram=
+  true,false
+  -2952.150916729439,-2880.9430245061158
+
+  Evaluating fold=1
+    Training. Fold= 0 2 3 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=526
+Total Correct=474
+Total Accuracy=0.9011406844106464
+95% Confidence Interval=0.9011406844106464 +/- 0.02550752363752875
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,413,2
+  false,50,61
+Macro-averaged Precision=0.9301313037814118
+Macro-averaged Recall=0.7723651362205579
+Macro-averaged F=0.8209619563794412
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=1052
+  True Positive=474
+  False Negative=52
+  False Positive=52
+  True Negative=474
+  Positive Reference=526
+  Positive Response=526
+  Negative Reference=526
+  Negative Response=526
+  Accuracy=0.9011406844106464
+  Recall=0.9011406844106464
+  Precision=0.9011406844106464
+  Rejection Recall=0.9011406844106464
+  Rejection Precision=0.9011406844106464
+  F(1)=0.9011406844106464
+  Fowlkes-Mallows=526.0
+  Jaccard Coefficient=0.8200692041522492
+  Yule's Q=0.9762160260357111
+  Yule's Y=0.8022813688212928
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.8022813688212929
+  kappa Unbiased=0.8022813688212929
+  kappa No Prevalence=0.8022813688212929
+  chi Squared=677.1254752851711
+  phi Squared=0.6436553947577672
+  Accuracy Deviation=0.00920231782416976
+Random Accuracy=0.71975162283682
+Random Accuracy Unbiased=0.7239153377958334
+kappa=0.6472439320075318
+kappa Unbiased=0.6419239127588827
+kappa No Prevalence =0.8022813688212929
+Reference Entropy=0.7434405015506846
+Response Entropy=0.5287047371440434
+Cross Entropy=0.7912983608484072
+Joint Entropy=0.9877080591092163
+Conditional Entropy=0.24426755755853174
+Mutual Information=0.2844371795855116
+Kullback-Liebler Divergence=0.047857859297722516
+chi Squared=246.48943049360443
+chi-Squared Degrees of Freedom=1
+phi Squared=0.46861108458860157
+Cramer's V=0.6845517398915889
+lambda A=0.5315315315315315
+lambda B=0.1746031746031746
+Average Reference Rank=NaN
+Average Score Reference=-1.7019134869534538
+Average Conditional Probability Reference=0.9006496116451902
+Average Log2 Joint Probability Reference=-2584.8192798084883
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=526
+  True Positive=413
+  False Negative=2
+  False Positive=50
+  True Negative=61
+  Positive Reference=415
+  Positive Response=463
+  Negative Reference=111
+  Negative Response=63
+  Accuracy=0.9011406844106464
+  Recall=0.9951807228915662
+  Precision=0.8920086393088553
+  Rejection Recall=0.5495495495495496
+  Rejection Precision=0.9682539682539683
+  F(1)=0.9407744874715263
+  Fowlkes-Mallows=438.34347263304835
+  Jaccard Coefficient=0.8881720430107527
+  Yule's Q=0.9920926738623335
+  Yule's Y=0.8814625360021007
+  Reference Likelihood=0.7889733840304183
+  Response Likelihood=0.8802281368821293
+  Random Accuracy=0.71975162283682
+  Random Accuracy Unbiased=0.7239153377958334
+  kappa=0.6472439320075318
+  kappa Unbiased=0.6419239127588827
+  kappa No Prevalence=0.8022813688212929
+  chi Squared=246.48943049360443
+  phi Squared=0.46861108458860157
+  Accuracy Deviation=0.013014042672208546
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.004819277108433735,0.9951807228915662
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6761389090859256,-2.018144711767079
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9951784918247437,0.004821508175256314
+Average Joint Probability Histogram=
+  true,false
+  -2539.352589569621,-2976.327389664235
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=526
+  True Positive=61
+  False Negative=50
+  False Positive=2
+  True Negative=413
+  Positive Reference=111
+  Positive Response=63
+  Negative Reference=415
+  Negative Response=463
+  Accuracy=0.9011406844106464
+  Recall=0.5495495495495496
+  Precision=0.9682539682539683
+  Rejection Recall=0.9951807228915662
+  Rejection Precision=0.8920086393088553
+  F(1)=0.7011494252873564
+  Fowlkes-Mallows=83.62415918859813
+  Jaccard Coefficient=0.5398230088495575
+  Yule's Q=0.9920926738623335
+  Yule's Y=0.8814625360021007
+  Reference Likelihood=0.21102661596958175
+  Response Likelihood=0.11977186311787072
+  Random Accuracy=0.71975162283682
+  Random Accuracy Unbiased=0.7239153377958334
+  kappa=0.6472439320075318
+  kappa Unbiased=0.6419239127588827
+  kappa No Prevalence=0.8022813688212929
+  chi Squared=246.48943049360443
+  phi Squared=0.46861108458860157
+  Accuracy Deviation=0.013014042672208546
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5495495495495496,0.45045045045045046
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8403111390234783,-1.7982778997014146
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4527691746116987,0.5472308253883014
+Average Joint Probability Histogram=
+  true,false
+  -2840.260180137814,-2754.80735592677
+
+  Evaluating fold=2
+    Training. Fold= 0 1 3 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=790
+Total Correct=709
+Total Accuracy=0.8974683544303798
+95% Confidence Interval=0.8974683544303798 +/- 0.02115344284756064
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,619,4
+  false,77,90
+Macro-averaged Precision=0.9234073123012962
+Macro-averaged Recall=0.7662508049711172
+Macro-averaged F=0.8141225066011346
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=1580
+  True Positive=709
+  False Negative=81
+  False Positive=81
+  True Negative=709
+  Positive Reference=790
+  Positive Response=790
+  Negative Reference=790
+  Negative Response=790
+  Accuracy=0.8974683544303798
+  Recall=0.8974683544303798
+  Precision=0.8974683544303798
+  Rejection Recall=0.8974683544303798
+  Rejection Precision=0.8974683544303798
+  F(1)=0.8974683544303798
+  Fowlkes-Mallows=790.0
+  Jaccard Coefficient=0.8140068886337543
+  Yule's Q=0.9742322903452583
+  Yule's Y=0.7949367088607595
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7949367088607595
+  kappa Unbiased=0.7949367088607595
+  kappa No Prevalence=0.7949367088607595
+  chi Squared=998.4405063291139
+  phi Squared=0.6319243710943758
+  Accuracy Deviation=0.00763150147089398
+Random Accuracy=0.719926293863163
+Random Accuracy Unbiased=0.7241956417240827
+kappa=0.633911919173427
+kappa Unbiased=0.6282450132022692
+kappa No Prevalence =0.7949367088607595
+Reference Entropy=0.7441358547389971
+Response Entropy=0.5264429884209046
+Cross Entropy=0.7933415821227903
+Joint Entropy=0.9987609719039489
+Conditional Entropy=0.25462511716495173
+Mutual Information=0.2718178712559528
+Kullback-Liebler Divergence=0.04920572738379325
+chi Squared=356.2348192295722
+chi-Squared Degrees of Freedom=1
+phi Squared=0.45093015092350913
+Cramer's V=0.6715133289246827
+lambda A=0.5149700598802395
+lambda B=0.13829787234042554
+Average Reference Rank=NaN
+Average Score Reference=-1.7114235350727882
+Average Conditional Probability Reference=0.8965427021734768
+Average Log2 Joint Probability Reference=-2521.455538331649
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=790
+  True Positive=619
+  False Negative=4
+  False Positive=77
+  True Negative=90
+  Positive Reference=623
+  Positive Response=696
+  Negative Reference=167
+  Negative Response=94
+  Accuracy=0.8974683544303798
+  Recall=0.9935794542536116
+  Precision=0.889367816091954
+  Rejection Recall=0.5389221556886228
+  Rejection Precision=0.9574468085106383
+  F(1)=0.9385898407884762
+  Fowlkes-Mallows=658.4891798655465
+  Jaccard Coefficient=0.8842857142857142
+  Yule's Q=0.9890035345781713
+  Yule's Y=0.8615824805286394
+  Reference Likelihood=0.7886075949367088
+  Response Likelihood=0.8810126582278481
+  Random Accuracy=0.719926293863163
+  Random Accuracy Unbiased=0.7241956417240827
+  kappa=0.633911919173427
+  kappa Unbiased=0.6282450132022692
+  kappa No Prevalence=0.7949367088607595
+  chi Squared=356.2348192295723
+  phi Squared=0.45093015092350924
+  Accuracy Deviation=0.01079257288140849
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.006420545746388443,0.9935794542536116
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6819280304634554,-2.023591131590253
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.993388611257575,0.006611388742424923
+Average Joint Probability Histogram=
+  true,false
+  -2439.991212513226,-2867.4704713390915
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=790
+  True Positive=90
+  False Negative=77
+  False Positive=4
+  True Negative=619
+  Positive Reference=167
+  Positive Response=94
+  Negative Reference=623
+  Negative Response=696
+  Accuracy=0.8974683544303798
+  Recall=0.5389221556886228
+  Precision=0.9574468085106383
+  Rejection Recall=0.9935794542536116
+  Rejection Precision=0.889367816091954
+  F(1)=0.689655172413793
+  Fowlkes-Mallows=125.291659738388
+  Jaccard Coefficient=0.5263157894736842
+  Yule's Q=0.9890035345781713
+  Yule's Y=0.8615824805286394
+  Reference Likelihood=0.21139240506329113
+  Response Likelihood=0.1189873417721519
+  Random Accuracy=0.719926293863163
+  Random Accuracy Unbiased=0.7241956417240827
+  kappa=0.633911919173427
+  kappa Unbiased=0.6282450132022692
+  kappa No Prevalence=0.7949367088607595
+  chi Squared=356.2348192295723
+  phi Squared=0.45093015092350924
+  Accuracy Deviation=0.01079257288140849
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5389221556886228,0.46107784431137727
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8601867455960917,-1.8214576630465318
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.464744731116304,0.535255268883696
+Average Joint Probability Histogram=
+  true,false
+  -2875.8918438544833,-2825.361376564446
+
+  Evaluating fold=3
+    Training. Fold= 0 1 2 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1054
+Total Correct=947
+Total Accuracy=0.8984819734345351
+95% Confidence Interval=0.8984819734345351 +/- 0.01823316379396529
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,825,6
+  false,101,122
+Macro-averaged Precision=0.9220268628509719
+Macro-averaged Recall=0.769932492593612
+Macro-averaged F=0.8171287175271238
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=2108
+  True Positive=947
+  False Negative=107
+  False Positive=107
+  True Negative=947
+  Positive Reference=1054
+  Positive Response=1054
+  Negative Reference=1054
+  Negative Response=1054
+  Accuracy=0.8984819734345351
+  Recall=0.8984819734345351
+  Precision=0.8984819734345351
+  Rejection Recall=0.8984819734345351
+  Rejection Precision=0.8984819734345351
+  F(1)=0.8984819734345351
+  Fowlkes-Mallows=1054.0
+  Jaccard Coefficient=0.8156761412575366
+  Yule's Q=0.9747891017750463
+  Yule's Y=0.7969639468690702
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7969639468690701
+  kappa Unbiased=0.7969639468690701
+  kappa No Prevalence=0.7969639468690701
+  chi Squared=1338.899430740038
+  phi Squared=0.6351515326091262
+  Accuracy Deviation=0.006577956000611171
+Random Accuracy=0.7183711459732329
+Random Accuracy Unbiased=0.7224331092539851
+kappa=0.6395325794429563
+kappa Unbiased=0.6342574350542476
+kappa No Prevalence =0.7969639468690701
+Reference Entropy=0.744482438384478
+Response Entropy=0.5334920521125668
+Cross Entropy=0.7908094111350739
+Joint Entropy=1.0033805985254478
+Conditional Entropy=0.25889816014096956
+Mutual Information=0.2745938919715971
+Kullback-Liebler Divergence=0.04632697275059565
+chi Squared=480.28150493795926
+chi-Squared Degrees of Freedom=1
+phi Squared=0.455675052123301
+Cramer's V=0.6750370746287206
+lambda A=0.5201793721973094
+lambda B=0.1640625
+Average Reference Rank=NaN
+Average Score Reference=-1.7041052880773948
+Average Conditional Probability Reference=0.8982392956118518
+Average Log2 Joint Probability Reference=-2506.7997851485698
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1054
+  True Positive=825
+  False Negative=6
+  False Positive=101
+  True Negative=122
+  Positive Reference=831
+  Positive Response=926
+  Negative Reference=223
+  Negative Response=128
+  Accuracy=0.8984819734345351
+  Recall=0.9927797833935018
+  Precision=0.8909287257019438
+  Rejection Recall=0.547085201793722
+  Rejection Precision=0.953125
+  F(1)=0.9391007398975526
+  Fowlkes-Mallows=877.2149109539805
+  Jaccard Coefficient=0.8851931330472103
+  Yule's Q=0.9880303389428775
+  Yule's Y=0.855986183006286
+  Reference Likelihood=0.7884250474383302
+  Response Likelihood=0.8785578747628083
+  Random Accuracy=0.7183711459732329
+  Random Accuracy Unbiased=0.7224331092539851
+  kappa=0.6395325794429563
+  kappa Unbiased=0.6342574350542476
+  kappa No Prevalence=0.7969639468690701
+  chi Squared=480.2815049379592
+  phi Squared=0.45567505212330095
+  Accuracy Deviation=0.0093026345887578
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.007220216606498195,0.9927797833935018
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6772259043525504,-2.0177633470439025
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9926532516139597,0.007346748386040581
+Average Joint Probability Histogram=
+  true,false
+  -2428.037549038637,-2856.9072654967104
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1054
+  True Positive=122
+  False Negative=101
+  False Positive=6
+  True Negative=825
+  Positive Reference=223
+  Positive Response=128
+  Negative Reference=831
+  Negative Response=926
+  Accuracy=0.8984819734345351
+  Recall=0.547085201793722
+  Precision=0.953125
+  Rejection Recall=0.9927797833935018
+  Rejection Precision=0.8909287257019438
+  F(1)=0.6951566951566951
+  Fowlkes-Mallows=168.949696655543
+  Jaccard Coefficient=0.5327510917030568
+  Yule's Q=0.9880303389428775
+  Yule's Y=0.855986183006286
+  Reference Likelihood=0.21157495256166983
+  Response Likelihood=0.12144212523719165
+  Random Accuracy=0.7183711459732329
+  Random Accuracy Unbiased=0.7224331092539851
+  kappa=0.6395325794429563
+  kappa Unbiased=0.6342574350542476
+  kappa No Prevalence=0.7969639468690701
+  chi Squared=480.2815049379592
+  phi Squared=0.45567505212330095
+  Accuracy Deviation=0.0093026345887578
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.547085201793722,0.452914798206278
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.846804317275838,-1.8042701664421774
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.45359028931080203,0.546409710689198
+Average Joint Probability Histogram=
+  true,false
+  -2883.790997549453,-2800.303902670347
+
+  Evaluating fold=4
+    Training. Fold= 0 1 2 3 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1318
+Total Correct=1181
+Total Accuracy=0.8960546282245827
+95% Confidence Interval=0.8960546282245827 +/- 0.016476622377328703
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1033,6
+  false,131,148
+Macro-averaged Precision=0.9242480028562503
+Macro-averaged Recall=0.7623455831875838
+Macro-averaged F=0.8107074229032634
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=2636
+  True Positive=1181
+  False Negative=137
+  False Positive=137
+  True Negative=1181
+  Positive Reference=1318
+  Positive Response=1318
+  Negative Reference=1318
+  Negative Response=1318
+  Accuracy=0.8960546282245827
+  Recall=0.8960546282245827
+  Precision=0.8960546282245827
+  Rejection Recall=0.8960546282245827
+  Rejection Precision=0.8960546282245827
+  F(1)=0.8960546282245827
+  Fowlkes-Mallows=1318.0
+  Jaccard Coefficient=0.8116838487972509
+  Yule's Q=0.9734437896613443
+  Yule's Y=0.7921092564491654
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7921092564491654
+  kappa Unbiased=0.7921092564491654
+  kappa No Prevalence=0.7921092564491654
+  chi Squared=1653.9241274658573
+  phi Squared=0.6274370741524496
+  Accuracy Deviation=0.005944250721458745
+Random Accuracy=0.7209398983607389
+Random Accuracy Unbiased=0.7254372744835718
+kappa=0.627516183199178
+kappa Unbiased=0.6214148458065266
+kappa No Prevalence =0.7921092564491654
+Reference Entropy=0.7446900400446076
+Response Entropy=0.5202196122066426
+Cross Entropy=0.7969731025531318
+Joint Entropy=0.99620716262078
+Conditional Entropy=0.25151712257617254
+Mutual Information=0.26870248963046994
+Kullback-Liebler Divergence=0.05228306250852427
+chi Squared=586.771437032787
+chi-Squared Degrees of Freedom=1
+phi Squared=0.44519835890196285
+Cramer's V=0.6672318629246979
+lambda A=0.5089605734767025
+lambda B=0.11038961038961038
+Average Reference Rank=NaN
+Average Score Reference=-1.6982216929109735
+Average Conditional Probability Reference=0.8959261316674233
+Average Log2 Joint Probability Reference=-2431.878328755681
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1318
+  True Positive=1033
+  False Negative=6
+  False Positive=131
+  True Negative=148
+  Positive Reference=1039
+  Positive Response=1164
+  Negative Reference=279
+  Negative Response=154
+  Accuracy=0.8960546282245827
+  Recall=0.9942252165543792
+  Precision=0.8874570446735395
+  Rejection Recall=0.5304659498207885
+  Rejection Precision=0.961038961038961
+  F(1)=0.9378120744439401
+  Fowlkes-Mallows=1099.7254202754432
+  Jaccard Coefficient=0.8829059829059829
+  Yule's Q=0.9897702869785905
+  Yule's Y=0.8661907067214901
+  Reference Likelihood=0.7883156297420334
+  Response Likelihood=0.8831562974203339
+  Random Accuracy=0.7209398983607389
+  Random Accuracy Unbiased=0.7254372744835718
+  kappa=0.627516183199178
+  kappa Unbiased=0.6214148458065266
+  kappa No Prevalence=0.7921092564491654
+  chi Squared=586.7714370327872
+  phi Squared=0.44519835890196297
+  Accuracy Deviation=0.008406439988433012
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.005774783445620789,0.9942252165543792
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6737663040726125,-2.0152631998617174
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9941217521462014,0.005878247853798637
+Average Joint Probability Histogram=
+  true,false
+  -2364.2757720630316,-2792.243139715337
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1318
+  True Positive=148
+  False Negative=131
+  False Positive=6
+  True Negative=1033
+  Positive Reference=279
+  Positive Response=154
+  Negative Reference=1039
+  Negative Response=1164
+  Accuracy=0.8960546282245827
+  Recall=0.5304659498207885
+  Precision=0.961038961038961
+  Rejection Recall=0.9942252165543792
+  Rejection Precision=0.8874570446735395
+  F(1)=0.6836027713625865
+  Fowlkes-Mallows=207.2824160414964
+  Jaccard Coefficient=0.519298245614035
+  Yule's Q=0.9897702869785905
+  Yule's Y=0.8661907067214901
+  Reference Likelihood=0.2116843702579666
+  Response Likelihood=0.11684370257966616
+  Random Accuracy=0.7209398983607389
+  Random Accuracy Unbiased=0.7254372744835718
+  kappa=0.627516183199178
+  kappa Unbiased=0.6214148458065266
+  kappa No Prevalence=0.7921092564491654
+  chi Squared=586.7714370327872
+  phi Squared=0.44519835890196297
+  Accuracy Deviation=0.008406439988433012
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5304659498207885,0.46953405017921146
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.839146131090926,-1.789293911559935
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4697557668180639,0.5302442331819364
+Average Joint Probability Histogram=
+  true,false
+  -2801.538492136253,-2683.6312190913973
+
+  Evaluating fold=5
+    Training. Fold= 0 1 2 3 4 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1582
+Total Correct=1421
+Total Accuracy=0.8982300884955752
+95% Confidence Interval=0.8982300884955752 +/- 0.014898972878909301
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1241,6
+  false,155,180
+Macro-averaged Precision=0.9283552084296146
+Macro-averaged Recall=0.766250942560653
+Macro-averaged F=0.8150316302869347
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=3164
+  True Positive=1421
+  False Negative=161
+  False Positive=161
+  True Negative=1421
+  Positive Reference=1582
+  Positive Response=1582
+  Negative Reference=1582
+  Negative Response=1582
+  Accuracy=0.8982300884955752
+  Recall=0.8982300884955752
+  Precision=0.8982300884955752
+  Rejection Recall=0.8982300884955752
+  Rejection Precision=0.8982300884955752
+  F(1)=0.8982300884955752
+  Fowlkes-Mallows=1582.0
+  Jaccard Coefficient=0.8152610441767069
+  Yule's Q=0.9746513968086635
+  Yule's Y=0.7964601769911505
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7964601769911503
+  kappa Unbiased=0.7964601769911503
+  kappa No Prevalence=0.7964601769911503
+  chi Squared=2007.0796460176991
+  phi Squared=0.6343488135327747
+  Accuracy Deviation=0.005375084058873074
+Random Accuracy=0.7204637826624111
+Random Accuracy Unbiased=0.7248991498862838
+kappa=0.6359330019067982
+kappa Unbiased=0.6300632605738695
+kappa No Prevalence =0.7964601769911503
+Reference Entropy=0.7448282962122237
+Response Entropy=0.522343162187856
+Cross Entropy=0.7962247916759353
+Joint Entropy=0.9903933795910295
+Conditional Entropy=0.24556508337880592
+Mutual Information=0.27677807880905025
+Kullback-Liebler Divergence=0.051396495463711556
+chi Squared=721.7082607533084
+chi-Squared Degrees of Freedom=1
+phi Squared=0.4561999119805995
+Cramer's V=0.6754257264722743
+lambda A=0.5194029850746269
+lambda B=0.13440860215053763
+Average Reference Rank=NaN
+Average Score Reference=-1.696615309533886
+Average Conditional Probability Reference=0.8978552681104883
+Average Log2 Joint Probability Reference=-2460.912825663879
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1582
+  True Positive=1241
+  False Negative=6
+  False Positive=155
+  True Negative=180
+  Positive Reference=1247
+  Positive Response=1396
+  Negative Reference=335
+  Negative Response=186
+  Accuracy=0.8982300884955752
+  Recall=0.9951884522854851
+  Precision=0.8889684813753582
+  Rejection Recall=0.5373134328358209
+  Rejection Precision=0.967741935483871
+  F(1)=0.9390843738176315
+  Fowlkes-Mallows=1319.3983477327838
+  Jaccard Coefficient=0.8851640513552068
+  Yule's Q=0.9917079042396684
+  Yule's Y=0.8787744989694959
+  Reference Likelihood=0.7882427307206068
+  Response Likelihood=0.8824273072060683
+  Random Accuracy=0.7204637826624111
+  Random Accuracy Unbiased=0.7248991498862838
+  kappa=0.6359330019067982
+  kappa Unbiased=0.6300632605738695
+  kappa No Prevalence=0.7964601769911503
+  chi Squared=721.7082607533083
+  phi Squared=0.45619991198059945
+  Accuracy Deviation=0.007601516774953725
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.0048115477145148355,0.9951884522854851
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6731587217318646,-2.011406448395675
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9947908979812171,0.005209102018782876
+Average Joint Probability Histogram=
+  true,false
+  -2364.5352911667032,-2793.6650527248617
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1582
+  True Positive=180
+  False Negative=155
+  False Positive=6
+  True Negative=1241
+  Positive Reference=335
+  Positive Response=186
+  Negative Reference=1247
+  Negative Response=1396
+  Accuracy=0.8982300884955752
+  Recall=0.5373134328358209
+  Precision=0.967741935483871
+  Rejection Recall=0.9951884522854851
+  Rejection Precision=0.8889684813753582
+  F(1)=0.690978886756238
+  Fowlkes-Mallows=249.61971076018816
+  Jaccard Coefficient=0.5278592375366569
+  Yule's Q=0.9917079042396684
+  Yule's Y=0.8787744989694959
+  Reference Likelihood=0.21175726927939317
+  Response Likelihood=0.11757269279393173
+  Random Accuracy=0.720463782662411
+  Random Accuracy Unbiased=0.7248991498862838
+  kappa=0.6359330019067984
+  kappa Unbiased=0.6300632605738695
+  kappa No Prevalence=0.7964601769911503
+  chi Squared=721.7082607533083
+  phi Squared=0.45619991198059945
+  Accuracy Deviation=0.007601516774953725
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5373134328358209,0.4626865671641791
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8386903173995512,-1.7839298318894805
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.46297676307995733,0.537023236920043
+Average Joint Probability Histogram=
+  true,false
+  -2959.0100577242292,-2819.6674092996436
+
+  Evaluating fold=6
+    Training. Fold= 0 1 2 3 4 5 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1845
+Total Correct=1659
+Total Accuracy=0.8991869918699187
+95% Confidence Interval=0.8991869918699187 +/- 0.01373855892366576
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1448,7
+  false,179,211
+Macro-averaged Precision=0.9289357347061908
+Macro-averaged Recall=0.7681073222310335
+Macro-averaged F=0.8168642627821988
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=3690
+  True Positive=1659
+  False Negative=186
+  False Positive=186
+  True Negative=1659
+  Positive Reference=1845
+  Positive Response=1845
+  Negative Reference=1845
+  Negative Response=1845
+  Accuracy=0.8991869918699187
+  Recall=0.8991869918699187
+  Precision=0.8991869918699187
+  Rejection Recall=0.8991869918699187
+  Rejection Precision=0.8991869918699187
+  F(1)=0.8991869918699187
+  Fowlkes-Mallows=1845.0
+  Jaccard Coefficient=0.8168389955686853
+  Yule's Q=0.9751722088918887
+  Yule's Y=0.7983739837398374
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7983739837398374
+  kappa Unbiased=0.7983739837398374
+  kappa No Prevalence=0.7983739837398374
+  chi Squared=2352.009756097561
+  phi Squared=0.6374010179126182
+  Accuracy Deviation=0.0049564429482933745
+Random Accuracy=0.7204133342146429
+Random Accuracy Unbiased=0.7247587782110883
+kappa=0.6394212583532972
+kappa Unbiased=0.6337285255643977
+kappa No Prevalence =0.7983739837398374
+Reference Entropy=0.7441163072594044
+Response Entropy=0.5240404395165537
+Cross Entropy=0.7943754228629187
+Joint Entropy=0.9891431595394102
+Conditional Entropy=0.24502685228000587
+Mutual Information=0.2790135872365479
+Kullback-Liebler Divergence=0.05025911560351454
+chi Squared=848.7059869606305
+chi-Squared Degrees of Freedom=1
+phi Squared=0.4600032449651114
+Cramer's V=0.6782353905283264
+lambda A=0.5230769230769231
+lambda B=0.14678899082568808
+Average Reference Rank=NaN
+Average Score Reference=-1.6952464213925857
+Average Conditional Probability Reference=0.8987272169880591
+Average Log2 Joint Probability Reference=-2406.037470079582
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1845
+  True Positive=1448
+  False Negative=7
+  False Positive=179
+  True Negative=211
+  Positive Reference=1455
+  Positive Response=1627
+  Negative Reference=390
+  Negative Response=218
+  Accuracy=0.8991869918699187
+  Recall=0.9951890034364261
+  Precision=0.8899815611555009
+  Rejection Recall=0.541025641025641
+  Rejection Precision=0.9678899082568807
+  F(1)=0.9396495781959766
+  Fowlkes-Mallows=1538.5983881442228
+  Jaccard Coefficient=0.8861689106487148
+  Yule's Q=0.9918313063716462
+  Yule's Y=0.8796289230642381
+  Reference Likelihood=0.7886178861788617
+  Response Likelihood=0.8818428184281842
+  Random Accuracy=0.7204133342146429
+  Random Accuracy Unbiased=0.7247587782110883
+  kappa=0.6394212583532972
+  kappa Unbiased=0.6337285255643977
+  kappa No Prevalence=0.7983739837398374
+  chi Squared=848.7059869606304
+  phi Squared=0.46000324496511136
+  Accuracy Deviation=0.007009468838604979
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.004810996563573883,0.9951890034364261
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6729385429702974,-2.01083186173323
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.994883435070305,0.005116564929695284
+Average Joint Probability Histogram=
+  true,false
+  -2319.806114607769,-2743.3880967159334
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1845
+  True Positive=211
+  False Negative=179
+  False Positive=7
+  True Negative=1448
+  Positive Reference=390
+  Positive Response=218
+  Negative Reference=1455
+  Negative Response=1627
+  Accuracy=0.8991869918699187
+  Recall=0.541025641025641
+  Precision=0.9678899082568807
+  Rejection Recall=0.9951890034364261
+  Rejection Precision=0.8899815611555009
+  F(1)=0.694078947368421
+  Fowlkes-Mallows=291.58189244190044
+  Jaccard Coefficient=0.5314861460957179
+  Yule's Q=0.9918313063716462
+  Yule's Y=0.8796289230642381
+  Reference Likelihood=0.21138211382113822
+  Response Likelihood=0.11815718157181572
+  Random Accuracy=0.7204133342146429
+  Random Accuracy Unbiased=0.7247587782110885
+  kappa=0.6394212583532972
+  kappa Unbiased=0.6337285255643975
+  kappa No Prevalence=0.7983739837398374
+  chi Squared=848.7059869606304
+  phi Squared=0.46000324496511136
+  Accuracy Deviation=0.007009468838604979
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.541025641025641,0.45897435897435895
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8389788578962745,-1.778471967814207
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4600094427803202,0.53999055721968
+Average Joint Probability Histogram=
+  true,false
+  -2893.7640347598676,-2727.7467578013548
+
+  Evaluating fold=7
+    Training. Fold= 0 1 2 3 4 5 6 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=2107
+Total Correct=1893
+Total Accuracy=0.8984337921214998
+95% Confidence Interval=0.8984337921214998 +/- 0.012898566931740572
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1653,9
+  false,205,240
+Macro-averaged Precision=0.9267608647723293
+Macro-averaged Recall=0.7669553401208777
+Macro-averaged F=0.8154235983756877
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=4214
+  True Positive=1893
+  False Negative=214
+  False Positive=214
+  True Negative=1893
+  Positive Reference=2107
+  Positive Response=2107
+  Negative Reference=2107
+  Negative Response=2107
+  Accuracy=0.8984337921214998
+  Recall=0.8984337921214998
+  Precision=0.8984337921214998
+  Rejection Recall=0.8984337921214998
+  Rejection Precision=0.8984337921214998
+  F(1)=0.8984337921214997
+  Fowlkes-Mallows=2107.0
+  Jaccard Coefficient=0.8155967255493322
+  Yule's Q=0.9747627950165944
+  Yule's Y=0.7968675842429995
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7968675842429995
+  kappa Unbiased=0.7968675842429995
+  kappa No Prevalence=0.7968675842429995
+  chi Squared=2675.8813478879924
+  phi Squared=0.634997946817274
+  Accuracy Deviation=0.0046534000739909785
+Random Accuracy=0.7205400940522123
+Random Accuracy Unbiased=0.7248667571133263
+kappa=0.636562506045228
+kappa Unbiased=0.6308471967513757
+kappa No Prevalence =0.7968675842429995
+Reference Entropy=0.7437716870103599
+Response Entropy=0.5240993666464845
+Cross Entropy=0.7938233530943516
+Joint Entropy=0.9923337508259267
+Conditional Entropy=0.24856206381556684
+Mutual Information=0.2755373028309176
+Kullback-Liebler Divergence=0.05005166608399175
+chi Squared=960.1691017374039
+chi-Squared Degrees of Freedom=1
+phi Squared=0.45570436722230845
+Cramer's V=0.675058787975024
+lambda A=0.5191011235955056
+lambda B=0.14056224899598393
+Average Reference Rank=NaN
+Average Score Reference=-1.6949687778362257
+Average Conditional Probability Reference=0.898132007906777
+Average Log2 Joint Probability Reference=-2402.8699998309594
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2107
+  True Positive=1653
+  False Negative=9
+  False Positive=205
+  True Negative=240
+  Positive Reference=1662
+  Positive Response=1858
+  Negative Reference=445
+  Negative Response=249
+  Accuracy=0.8984337921214998
+  Recall=0.9945848375451264
+  Precision=0.8896663078579118
+  Rejection Recall=0.5393258426966292
+  Rejection Precision=0.963855421686747
+  F(1)=0.9392045454545455
+  Fowlkes-Mallows=1757.269472790101
+  Jaccard Coefficient=0.8853776111408677
+  Yule's Q=0.9907417861578413
+  Yule's Y=0.8723163284346079
+  Reference Likelihood=0.7887992406264831
+  Response Likelihood=0.8818224964404366
+  Random Accuracy=0.7205400940522123
+  Random Accuracy Unbiased=0.7248667571133263
+  kappa=0.636562506045228
+  kappa Unbiased=0.6308471967513757
+  kappa No Prevalence=0.7968675842429995
+  chi Squared=960.1691017374039
+  phi Squared=0.45570436722230845
+  Accuracy Deviation=0.006580901495786006
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.005415162454873646,0.9945848375451264
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6727023930612177,-2.0101292748883344
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.994317301129064,0.005682698870936154
+Average Joint Probability Histogram=
+  true,false
+  -2332.1891036390875,-2764.674849741184
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2107
+  True Positive=240
+  False Negative=205
+  False Positive=9
+  True Negative=1653
+  Positive Reference=445
+  Positive Response=249
+  Negative Reference=1662
+  Negative Response=1858
+  Accuracy=0.8984337921214998
+  Recall=0.5393258426966292
+  Precision=0.963855421686747
+  Rejection Recall=0.9945848375451264
+  Rejection Precision=0.8896663078579118
+  F(1)=0.6916426512968299
+  Fowlkes-Mallows=332.87384997923766
+  Jaccard Coefficient=0.5286343612334802
+  Yule's Q=0.9907417861578413
+  Yule's Y=0.8723163284346079
+  Reference Likelihood=0.21120075937351684
+  Response Likelihood=0.11817750355956336
+  Random Accuracy=0.7205400940522124
+  Random Accuracy Unbiased=0.7248667571133265
+  kappa=0.6365625060452279
+  kappa Unbiased=0.6308471967513753
+  kappa No Prevalence=0.7968675842429995
+  chi Squared=960.1691017374039
+  phi Squared=0.45570436722230845
+  Accuracy Deviation=0.006580901495786006
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5393258426966292,0.4606741573033708
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8420454517862448,-1.7781299722094093
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.46110385127398923,0.538896148726011
+Average Joint Probability Histogram=
+  true,false
+  -2845.86356146824,-2666.851234597013
+
+  Evaluating fold=8
+    Training. Fold= 0 1 2 3 4 5 6 7 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=2369
+Total Correct=2124
+Total Accuracy=0.8965808357956944
+95% Confidence Interval=0.8965808357956944 +/- 0.012262210823594334
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1856,13
+  false,232,268
+Macro-averaged Precision=0.9213127718465797
+Macro-averaged Recall=0.764522204387373
+Macro-averaged F=0.8121920116282042
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=4738
+  True Positive=2124
+  False Negative=245
+  False Positive=245
+  True Negative=2124
+  Positive Reference=2369
+  Positive Response=2369
+  Negative Reference=2369
+  Negative Response=2369
+  Accuracy=0.8965808357956944
+  Recall=0.8965808357956944
+  Precision=0.8965808357956944
+  Rejection Recall=0.8965808357956944
+  Rejection Precision=0.8965808357956944
+  F(1)=0.8965808357956944
+  Fowlkes-Mallows=2369.0
+  Jaccard Coefficient=0.8125478194338179
+  Yule's Q=0.9737389041127654
+  Yule's Y=0.7931616715913887
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7931616715913887
+  kappa Unbiased=0.7931616715913887
+  kappa No Prevalence=0.7931616715913887
+  chi Squared=2980.701561840439
+  phi Squared=0.629105437281646
+  Accuracy Deviation=0.004423822666174813
+Random Accuracy=0.7203948710665997
+Random Accuracy Unbiased=0.7246678240342712
+kappa=0.6301242234045741
+kappa Unbiased=0.6243840232564085
+kappa No Prevalence =0.7931616715913887
+Reference Entropy=0.7435030961652022
+Response Entropy=0.5253678792638703
+Cross Entropy=0.7928529147727019
+Joint Entropy=1.000994548582195
+Conditional Entropy=0.2574914524169929
+Mutual Information=0.2678764268468776
+Kullback-Liebler Divergence=0.04934981860749979
+chi Squared=1056.0678218859202
+chi-Squared Degrees of Freedom=1
+phi Squared=0.44578633258164635
+Cramer's V=0.6676723242591731
+lambda A=0.51
+lambda B=0.12811387900355872
+Average Reference Rank=NaN
+Average Score Reference=-1.696070941598461
+Average Conditional Probability Reference=0.8963249562986789
+Average Log2 Joint Probability Reference=-2395.2337819241384
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2369
+  True Positive=1856
+  False Negative=13
+  False Positive=232
+  True Negative=268
+  Positive Reference=1869
+  Positive Response=2088
+  Negative Reference=500
+  Negative Response=281
+  Accuracy=0.8965808357956944
+  Recall=0.9930444087747459
+  Precision=0.8888888888888888
+  Rejection Recall=0.536
+  Rejection Precision=0.9537366548042705
+  F(1)=0.9380844073793277
+  Fowlkes-Mallows=1975.4675395966394
+  Jaccard Coefficient=0.8833888624464541
+  Yule's Q=0.9879462216040797
+  Yule's Y=0.8555146935357357
+  Reference Likelihood=0.7889404812157028
+  Response Likelihood=0.881384550443225
+  Random Accuracy=0.7203948710665997
+  Random Accuracy Unbiased=0.7246678240342712
+  kappa=0.6301242234045741
+  kappa Unbiased=0.6243840232564085
+  kappa No Prevalence=0.7931616715913887
+  chi Squared=1056.06782188592
+  phi Squared=0.4457863325816463
+  Accuracy Deviation=0.006256230012037926
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.006955591225254147,0.9930444087747459
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.674228941356115,-2.0114598474439767
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9929585039766602,0.007041496023339962
+Average Joint Probability Histogram=
+  true,false
+  -2331.0782313458863,-2761.7524495367497
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2369
+  True Positive=268
+  False Negative=232
+  False Positive=13
+  True Negative=1856
+  Positive Reference=500
+  Positive Response=281
+  Negative Reference=1869
+  Negative Response=2088
+  Accuracy=0.8965808357956944
+  Recall=0.536
+  Precision=0.9537366548042705
+  Rejection Recall=0.9930444087747459
+  Rejection Precision=0.8888888888888888
+  F(1)=0.6862996158770807
+  Fowlkes-Mallows=374.83329627982624
+  Jaccard Coefficient=0.5224171539961013
+  Yule's Q=0.9879462216040797
+  Yule's Y=0.8555146935357357
+  Reference Likelihood=0.21105951878429718
+  Response Likelihood=0.11861544955677501
+  Random Accuracy=0.7203948710665997
+  Random Accuracy Unbiased=0.7246678240342712
+  kappa=0.6301242234045741
+  kappa Unbiased=0.6243840232564085
+  kappa No Prevalence=0.7931616715913887
+  chi Squared=1056.06782188592
+  phi Squared=0.4457863325816463
+  Accuracy Deviation=0.006256230012037926
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.536,0.464
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8417937986687571,-1.777716338504356
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.46489124492161443,0.5351087550783861
+Average Joint Probability Histogram=
+  true,false
+  -2816.8825321501845,-2635.0472299856538
+
+  Evaluating fold=9
+    Training. Fold= 0 1 2 3 4 5 6 7 8
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=2631
+Total Correct=2360
+Total Accuracy=0.8969973394146712
+95% Confidence Interval=0.8969973394146712 +/- 0.011614899227436115
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,2062,14
+  false,257,298
+Macro-averaged Precision=0.922152287126414
+Macro-averaged Recall=0.765096599489663
+Macro-averaged F=0.8128834669784396
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=5262
+  True Positive=2360
+  False Negative=271
+  False Positive=271
+  True Negative=2360
+  Positive Reference=2631
+  Positive Response=2631
+  Negative Reference=2631
+  Negative Response=2631
+  Accuracy=0.8969973394146712
+  Recall=0.8969973394146712
+  Precision=0.8969973394146712
+  Rejection Recall=0.8969973394146712
+  Rejection Precision=0.8969973394146712
+  F(1)=0.8969973394146712
+  Fowlkes-Mallows=2631.0
+  Jaccard Coefficient=0.8132322536181944
+  Yule's Q=0.9739711265610156
+  Yule's Y=0.7939946788293425
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7939946788293424
+  kappa Unbiased=0.7939946788293424
+  kappa No Prevalence=0.7939946788293424
+  chi Squared=3317.3097681489926
+  phi Squared=0.6304275500093106
+  Accuracy Deviation=0.004190292860468606
+Random Accuracy=0.7204981219015275
+Random Accuracy Unbiased=0.7247633361893779
+kappa=0.6314777514695643
+kappa Unbiased=0.625766933956879
+kappa No Prevalence =0.7939946788293424
+Reference Entropy=0.7432878742689848
+Response Entropy=0.5252829189663059
+Cross Entropy=0.7925630509486139
+Joint Entropy=0.9994315247423253
+Conditional Entropy=0.25614365047334037
+Mutual Information=0.26913926849296554
+Kullback-Liebler Divergence=0.049275176679629024
+chi Squared=1177.752792990776
+chi-Squared Degrees of Freedom=1
+phi Squared=0.4476445431359848
+Cramer's V=0.6690624359026479
+lambda A=0.5117117117117117
+lambda B=0.13141025641025642
+Average Reference Rank=NaN
+Average Score Reference=-1.6958680754683915
+Average Conditional Probability Reference=0.8968598242721634
+Average Log2 Joint Probability Reference=-2376.0224468767906
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2631
+  True Positive=2062
+  False Negative=14
+  False Positive=257
+  True Negative=298
+  Positive Reference=2076
+  Positive Response=2319
+  Negative Reference=555
+  Negative Response=312
+  Accuracy=0.8969973394146712
+  Recall=0.9932562620423893
+  Precision=0.8891763691246227
+  Rejection Recall=0.5369369369369369
+  Rejection Precision=0.9551282051282052
+  F(1)=0.9383390216154721
+  Fowlkes-Mallows=2194.138555333277
+  Jaccard Coefficient=0.8838405486498071
+  Yule's Q=0.9883573811550074
+  Yule's Y=0.8578372599037927
+  Reference Likelihood=0.7890535917901939
+  Response Likelihood=0.8814139110604333
+  Random Accuracy=0.7204981219015275
+  Random Accuracy Unbiased=0.7247633361893779
+  kappa=0.6314777514695643
+  kappa Unbiased=0.625766933956879
+  kappa No Prevalence=0.7939946788293424
+  chi Squared=1177.752792990776
+  phi Squared=0.4476445431359848
+  Accuracy Deviation=0.005925968993589855
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.00674373795761079,0.9932562620423893
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.6744130048923906,-2.0107767486558292
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9931733016312285,0.006826698368771622
+Average Joint Probability Histogram=
+  true,false
+  -2320.9650705039917,-2748.6674760052565
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2631
+  True Positive=298
+  False Negative=257
+  False Positive=14
+  True Negative=2062
+  Positive Reference=555
+  Positive Response=312
+  Negative Reference=2076
+  Negative Response=2319
+  Accuracy=0.8969973394146712
+  Recall=0.5369369369369369
+  Precision=0.9551282051282052
+  Rejection Recall=0.9932562620423893
+  Rejection Precision=0.8891763691246227
+  F(1)=0.6874279123414071
+  Fowlkes-Mallows=416.1249812255929
+  Jaccard Coefficient=0.523725834797891
+  Yule's Q=0.9883573811550074
+  Yule's Y=0.8578372599037927
+  Reference Likelihood=0.21094640820980615
+  Response Likelihood=0.11858608893956671
+  Random Accuracy=0.7204981219015275
+  Random Accuracy Unbiased=0.7247633361893779
+  kappa=0.6314777514695643
+  kappa Unbiased=0.625766933956879
+  kappa No Prevalence=0.7939946788293424
+  chi Squared=1177.752792990776
+  phi Squared=0.4476445431359848
+  Accuracy Deviation=0.005925968993589855
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5369369369369369,0.46306306306306305
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -1.8407031114941192,-1.7761216367580905
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4634046423898508,0.5365953576101495
+Average Joint Probability Histogram=
+  true,false
+  -2758.0180169179835,-2581.966795255051
+
+  Evaluating fold=0
+    Training. Fold= 1 2 3 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=262
+Total Correct=231
+Total Accuracy=0.8816793893129771
+95% Confidence Interval=0.8816793893129771 +/- 0.03911028414765693
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,203,4
+  false,27,28
+Macro-averaged Precision=0.878804347826087
+Macro-averaged Recall=0.7448836187966623
+Macro-averaged F=0.7863699729082827
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=524
+  True Positive=231
+  False Negative=31
+  False Positive=31
+  True Negative=231
+  Positive Reference=262
+  Positive Response=262
+  Negative Reference=262
+  Negative Response=262
+  Accuracy=0.8816793893129771
+  Recall=0.8816793893129771
+  Precision=0.8816793893129771
+  Rejection Recall=0.8816793893129771
+  Rejection Precision=0.8816793893129771
+  F(1)=0.8816793893129771
+  Fowlkes-Mallows=262.0
+  Jaccard Coefficient=0.78839590443686
+  Yule's Q=0.9646183866573396
+  Yule's Y=0.7633587786259542
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7633587786259541
+  kappa Unbiased=0.7633587786259541
+  kappa No Prevalence=0.7633587786259541
+  chi Squared=305.3435114503817
+  phi Squared=0.5827166249053086
+  Accuracy Deviation=0.01410976894639844
+Random Accuracy=0.719217994289377
+Random Accuracy Unbiased=0.7230712079715635
+kappa=0.5786032997820898
+kappa Unbiased=0.5727399458165651
+kappa No Prevalence =0.7633587786259541
+Reference Entropy=0.741336801361051
+Response Entropy=0.5354737201740675
+Cross Entropy=0.7852686483104057
+Joint Entropy=1.0599455528175368
+Conditional Entropy=0.3186087514564857
+Mutual Information=0.21686496871758168
+Kullback-Liebler Divergence=0.04393184694935473
+chi Squared=97.21560252811672
+chi-Squared Degrees of Freedom=1
+phi Squared=0.37105191804624704
+Cramer's V=0.6091403106397139
+lambda A=0.43636363636363634
+lambda B=0.03125
+Average Reference Rank=NaN
+Average Score Reference=-2.077162756309181
+Average Conditional Probability Reference=0.8837498222570139
+Average Log2 Joint Probability Reference=-3277.7018175251924
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=262
+  True Positive=203
+  False Negative=4
+  False Positive=27
+  True Negative=28
+  Positive Reference=207
+  Positive Response=230
+  Negative Reference=55
+  Negative Response=32
+  Accuracy=0.8816793893129771
+  Recall=0.9806763285024155
+  Precision=0.8826086956521739
+  Rejection Recall=0.509090909090909
+  Rejection Precision=0.875
+  F(1)=0.9290617848970252
+  Fowlkes-Mallows=218.19715855161817
+  Jaccard Coefficient=0.8675213675213675
+  Yule's Q=0.962707182320442
+  Yule's Y=0.7577116784578692
+  Reference Likelihood=0.7900763358778626
+  Response Likelihood=0.8778625954198473
+  Random Accuracy=0.719217994289377
+  Random Accuracy Unbiased=0.7230712079715635
+  kappa=0.5786032997820898
+  kappa Unbiased=0.5727399458165651
+  kappa No Prevalence=0.7633587786259541
+  chi Squared=97.2156025281167
+  phi Squared=0.371051918046247
+  Accuracy Deviation=0.019954226605947412
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.01932367149758454,0.9806763285024155
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.06201102663318,-2.275142963232057
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9789061926835815,0.02109380731641856
+Average Joint Probability Histogram=
+  true,false
+  -3243.3652446861156,-3580.36267409095
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=262
+  True Positive=28
+  False Negative=27
+  False Positive=4
+  True Negative=203
+  Positive Reference=55
+  Positive Response=32
+  Negative Reference=207
+  Negative Response=230
+  Accuracy=0.8816793893129771
+  Recall=0.509090909090909
+  Precision=0.875
+  Rejection Recall=0.9806763285024155
+  Rejection Precision=0.8826086956521739
+  F(1)=0.6436781609195402
+  Fowlkes-Mallows=41.95235392680606
+  Jaccard Coefficient=0.4745762711864407
+  Yule's Q=0.962707182320442
+  Yule's Y=0.7577116784578692
+  Reference Likelihood=0.2099236641221374
+  Response Likelihood=0.12213740458015267
+  Random Accuracy=0.719217994289377
+  Random Accuracy Unbiased=0.7230712079715635
+  kappa=0.5786032997820898
+  kappa Unbiased=0.5727399458165651
+  kappa No Prevalence=0.7633587786259541
+  chi Squared=97.2156025281167
+  phi Squared=0.371051918046247
+  Accuracy Deviation=0.019954226605947412
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.509090909090909,0.4909090909090909
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.165388418727963,-2.1341883570897675
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.474384153712067,0.525615846287933
+Average Joint Probability Histogram=
+  true,false
+  -3471.3654726473064,-3406.9321916650383
+
+  Evaluating fold=1
+    Training. Fold= 0 2 3 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=526
+Total Correct=462
+Total Accuracy=0.8783269961977186
+95% Confidence Interval=0.8783269961977186 +/- 0.02793755721507843
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,407,8
+  false,56,55
+Macro-averaged Precision=0.8760327745208955
+Macro-averaged Recall=0.7381091935308802
+Macro-averaged F=0.779645484774697
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=1052
+  True Positive=462
+  False Negative=64
+  False Positive=64
+  True Negative=462
+  Positive Reference=526
+  Positive Response=526
+  Negative Reference=526
+  Negative Response=526
+  Accuracy=0.8783269961977186
+  Recall=0.8783269961977186
+  Precision=0.8783269961977186
+  Rejection Recall=0.8783269961977186
+  Rejection Precision=0.8783269961977186
+  F(1)=0.8783269961977186
+  Fowlkes-Mallows=526.0
+  Jaccard Coefficient=0.7830508474576271
+  Yule's Q=0.9623425576905397
+  Yule's Y=0.7566539923954373
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7566539923954372
+  kappa Unbiased=0.7566539923954372
+  kappa No Prevalence=0.7566539923954372
+  chi Squared=602.296577946768
+  phi Squared=0.5725252642079544
+  Accuracy Deviation=0.010078998039065874
+Random Accuracy=0.71975162283682
+Random Accuracy Unbiased=0.7239153377958334
+kappa=0.5658386855477312
+kappa Unbiased=0.5592909695493937
+kappa No Prevalence =0.7566539923954372
+Reference Entropy=0.7434405015506846
+Response Entropy=0.5287047371440434
+Cross Entropy=0.7912983608484072
+Joint Entropy=1.062829923749632
+Conditional Entropy=0.3193894221989473
+Mutual Information=0.20931531494509603
+Kullback-Liebler Divergence=0.047857859297722516
+chi Squared=188.3855548756639
+chi-Squared Degrees of Freedom=1
+phi Squared=0.358147442729399
+Cramer's V=0.598454211054947
+lambda A=0.42342342342342343
+lambda B=0.0
+Average Reference Rank=NaN
+Average Score Reference=-2.089582031008593
+Average Conditional Probability Reference=0.8781817264648416
+Average Log2 Joint Probability Reference=-3167.2693845901617
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=526
+  True Positive=407
+  False Negative=8
+  False Positive=56
+  True Negative=55
+  Positive Reference=415
+  Positive Response=463
+  Negative Reference=111
+  Negative Response=63
+  Accuracy=0.8783269961977186
+  Recall=0.980722891566265
+  Precision=0.8790496760259179
+  Rejection Recall=0.4954954954954955
+  Rejection Precision=0.873015873015873
+  F(1)=0.9271070615034168
+  Fowlkes-Mallows=438.34347263304835
+  Jaccard Coefficient=0.8641188959660298
+  Yule's Q=0.9607585512197259
+  Yule's Y=0.752128591701819
+  Reference Likelihood=0.7889733840304183
+  Response Likelihood=0.8802281368821293
+  Random Accuracy=0.71975162283682
+  Random Accuracy Unbiased=0.7239153377958334
+  kappa=0.5658386855477312
+  kappa Unbiased=0.5592909695493937
+  kappa No Prevalence=0.7566539923954372
+  chi Squared=188.3855548756639
+  phi Squared=0.358147442729399
+  Accuracy Deviation=0.01425385572197879
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.01927710843373494,0.980722891566265
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0756618503500466,-2.2956857003112905
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9790471732367997,0.02095282676320032
+Average Joint Probability Histogram=
+  true,false
+  -3136.7710514672813,-3448.0288272131634
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=526
+  True Positive=55
+  False Negative=56
+  False Positive=8
+  True Negative=407
+  Positive Reference=111
+  Positive Response=63
+  Negative Reference=415
+  Negative Response=463
+  Accuracy=0.8783269961977186
+  Recall=0.4954954954954955
+  Precision=0.873015873015873
+  Rejection Recall=0.980722891566265
+  Rejection Precision=0.8790496760259179
+  F(1)=0.632183908045977
+  Fowlkes-Mallows=83.62415918859811
+  Jaccard Coefficient=0.46218487394957986
+  Yule's Q=0.9607585512197259
+  Yule's Y=0.752128591701819
+  Reference Likelihood=0.21102661596958175
+  Response Likelihood=0.11977186311787072
+  Random Accuracy=0.71975162283682
+  Random Accuracy Unbiased=0.7239153377958334
+  kappa=0.5658386855477312
+  kappa Unbiased=0.5592909695493937
+  kappa No Prevalence=0.7566539923954372
+  chi Squared=188.3855548756639
+  phi Squared=0.358147442729399
+  Accuracy Deviation=0.01425385572197879
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.4954954954954955,0.5045045045045045
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1612460705151673,-2.141625949686938
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.49892782678166886,0.5010721732183312
+Average Joint Probability Histogram=
+  true,false
+  -3342.1001406684272,-3281.294684103595
+
+  Evaluating fold=2
+    Training. Fold= 0 1 3 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=790
+Total Correct=689
+Total Accuracy=0.8721518987341772
+95% Confidence Interval=0.8721518987341772 +/- 0.023285508818344
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,612,11
+  false,90,77
+Macro-averaged Precision=0.8733974358974359
+Macro-averaged Recall=0.7217106717544045
+Macro-averaged F=0.7638475767665557
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=1580
+  True Positive=689
+  False Negative=101
+  False Positive=101
+  True Negative=689
+  Positive Reference=790
+  Positive Response=790
+  Negative Reference=790
+  Negative Response=790
+  Accuracy=0.8721518987341772
+  Recall=0.8721518987341772
+  Precision=0.8721518987341772
+  Rejection Recall=0.8721518987341772
+  Rejection Precision=0.8721518987341772
+  F(1)=0.8721518987341773
+  Fowlkes-Mallows=790.0
+  Jaccard Coefficient=0.7732884399551067
+  Yule's Q=0.9579272542800698
+  Yule's Y=0.7443037974683544
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7443037974683544
+  kappa Unbiased=0.7443037974683544
+  kappa No Prevalence=0.7443037974683544
+  chi Squared=875.3012658227848
+  phi Squared=0.5539881429258131
+  Accuracy Deviation=0.008400684280015404
+Random Accuracy=0.7243102066976446
+Random Accuracy Unbiased=0.7293102066976447
+kappa=0.536261028257913
+kappa Unbiased=0.5276951535331111
+kappa No Prevalence =0.7443037974683544
+Reference Entropy=0.7441358547389971
+Response Entropy=0.5041016391481566
+Cross Entropy=0.803691199314883
+Joint Entropy=1.0556019445377673
+Conditional Entropy=0.31146608979877033
+Mutual Information=0.19263554934938643
+Kullback-Liebler Divergence=0.05955534457588599
+chi Squared=261.60438044764896
+chi-Squared Degrees of Freedom=1
+phi Squared=0.33114478537677083
+Cramer's V=0.5754518097779959
+lambda A=0.39520958083832336
+lambda B=0.0
+Average Reference Rank=NaN
+Average Score Reference=-2.1021828169150703
+Average Conditional Probability Reference=0.8728849079863276
+Average Log2 Joint Probability Reference=-3089.1916021546053
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=790
+  True Positive=612
+  False Negative=11
+  False Positive=90
+  True Negative=77
+  Positive Reference=623
+  Positive Response=702
+  Negative Reference=167
+  Negative Response=88
+  Accuracy=0.8721518987341772
+  Recall=0.9823434991974318
+  Precision=0.8717948717948718
+  Rejection Recall=0.46107784431137727
+  Rejection Precision=0.875
+  F(1)=0.9237735849056603
+  Fowlkes-Mallows=661.3214044623084
+  Jaccard Coefficient=0.8583450210378681
+  Yule's Q=0.9588477366255144
+  Yule's Y=0.7468122178427409
+  Reference Likelihood=0.7886075949367088
+  Response Likelihood=0.8886075949367088
+  Random Accuracy=0.7243102066976447
+  Random Accuracy Unbiased=0.7293102066976447
+  kappa=0.5362610282579129
+  kappa Unbiased=0.5276951535331111
+  kappa No Prevalence=0.7443037974683544
+  chi Squared=261.60438044764896
+  phi Squared=0.33114478537677083
+  Accuracy Deviation=0.011880361642012244
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.01765650080256822,0.9823434991974318
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.084125861261499,-2.302971445536953
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9809713260228401,0.01902867397716015
+Average Joint Probability Histogram=
+  true,false
+  -3017.245442063832,-3318.3740127376304
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=790
+  True Positive=77
+  False Negative=90
+  False Positive=11
+  True Negative=612
+  Positive Reference=167
+  Positive Response=88
+  Negative Reference=623
+  Negative Response=702
+  Accuracy=0.8721518987341772
+  Recall=0.46107784431137727
+  Precision=0.875
+  Rejection Recall=0.9823434991974318
+  Rejection Precision=0.8717948717948718
+  F(1)=0.603921568627451
+  Fowlkes-Mallows=121.22705968553389
+  Jaccard Coefficient=0.43258426966292135
+  Yule's Q=0.9588477366255144
+  Yule's Y=0.7468122178427409
+  Reference Likelihood=0.21139240506329113
+  Response Likelihood=0.11139240506329114
+  Random Accuracy=0.7243102066976446
+  Random Accuracy Unbiased=0.7293102066976447
+  kappa=0.536261028257913
+  kappa Unbiased=0.5276951535331111
+  kappa No Prevalence=0.7443037974683544
+  chi Squared=261.60438044764896
+  phi Squared=0.33114478537677083
+  Accuracy Deviation=0.011880361642012244
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.46107784431137727,0.5389221556886228
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1798570087177693,-2.169544992796352
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.5303356814552749,0.4696643185447252
+Average Joint Probability Histogram=
+  true,false
+  -3399.800847812811,-3357.589552672856
+
+  Evaluating fold=3
+    Training. Fold= 0 1 2 4 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1054
+Total Correct=923
+Total Accuracy=0.8757115749525617
+95% Confidence Interval=0.8757115749525617 +/- 0.01991735450622573
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,818,13
+  false,118,105
+Macro-averaged Precision=0.8818810662031
+Macro-averaged Recall=0.7276041076449036
+Macro-averaged F=0.7708494109173226
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=2108
+  True Positive=923
+  False Negative=131
+  False Positive=131
+  True Negative=923
+  Positive Reference=1054
+  Positive Response=1054
+  Negative Reference=1054
+  Negative Response=1054
+  Accuracy=0.8757115749525617
+  Recall=0.8757115749525617
+  Precision=0.8757115749525617
+  Rejection Recall=0.8757115749525617
+  Rejection Precision=0.8757115749525617
+  F(1)=0.8757115749525617
+  Fowlkes-Mallows=1054.0
+  Jaccard Coefficient=0.7789029535864979
+  Yule's Q=0.9605081176863156
+  Yule's Y=0.7514231499051234
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7514231499051234
+  kappa Unbiased=0.7514231499051234
+  kappa No Prevalence=0.7514231499051234
+  chi Squared=1190.2542694497154
+  phi Squared=0.5646367502133375
+  Accuracy Deviation=0.007185559405432987
+Random Accuracy=0.7238441070251938
+Random Accuracy Unbiased=0.7288062283737025
+kappa=0.5499338300965493
+kappa Unbiased=0.5416988218346452
+kappa No Prevalence =0.7514231499051234
+Reference Entropy=0.744482438384478
+Response Entropy=0.5057831958926569
+Cross Entropy=0.8034215026984103
+Joint Entropy=1.047175063912523
+Conditional Entropy=0.30269262552804493
+Mutual Information=0.20309057036461184
+Kullback-Liebler Divergence=0.058939064313932255
+chi Squared=366.44502024728604
+chi-Squared Degrees of Freedom=1
+phi Squared=0.3476707971985636
+Cramer's V=0.5896361566242047
+lambda A=0.4125560538116592
+lambda B=0.0
+Average Reference Rank=NaN
+Average Score Reference=-2.0954009590964047
+Average Conditional Probability Reference=0.8764785891535962
+Average Log2 Joint Probability Reference=-3076.7039214209394
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1054
+  True Positive=818
+  False Negative=13
+  False Positive=118
+  True Negative=105
+  Positive Reference=831
+  Positive Response=936
+  Negative Reference=223
+  Negative Response=118
+  Accuracy=0.8757115749525617
+  Recall=0.9843561973525873
+  Precision=0.8739316239316239
+  Rejection Recall=0.47085201793721976
+  Rejection Precision=0.8898305084745762
+  F(1)=0.9258630447085456
+  Fowlkes-Mallows=881.9387733850916
+  Jaccard Coefficient=0.8619599578503688
+  Yule's Q=0.9649066617862372
+  Yule's Y=0.764226150833114
+  Reference Likelihood=0.7884250474383302
+  Response Likelihood=0.888045540796964
+  Random Accuracy=0.7238441070251938
+  Random Accuracy Unbiased=0.7288062283737025
+  kappa=0.5499338300965493
+  kappa Unbiased=0.5416988218346452
+  kappa No Prevalence=0.7514231499051234
+  chi Squared=366.4450202472861
+  phi Squared=0.34767079719856364
+  Accuracy Deviation=0.010161915564400882
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.015643802647412757,0.9843561973525873
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.079838319495854,-2.298707673230191
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9832246242823344,0.016775375717665606
+Average Joint Probability Histogram=
+  true,false
+  -3001.736594535779,-3308.901505972119
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1054
+  True Positive=105
+  False Negative=118
+  False Positive=13
+  True Negative=818
+  Positive Reference=223
+  Positive Response=118
+  Negative Reference=831
+  Negative Response=936
+  Accuracy=0.8757115749525617
+  Recall=0.47085201793721976
+  Precision=0.8898305084745762
+  Rejection Recall=0.9843561973525873
+  Rejection Precision=0.8739316239316239
+  F(1)=0.6158357771260996
+  Fowlkes-Mallows=162.21590550867694
+  Jaccard Coefficient=0.4449152542372881
+  Yule's Q=0.9649066617862372
+  Yule's Y=0.764226150833114
+  Reference Likelihood=0.21157495256166983
+  Response Likelihood=0.11195445920303605
+  Random Accuracy=0.7238441070251938
+  Random Accuracy Unbiased=0.7288062283737025
+  kappa=0.5499338300965493
+  kappa Unbiased=0.5416988218346452
+  kappa No Prevalence=0.7514231499051234
+  chi Squared=366.4450202472861
+  phi Squared=0.34767079719856364
+  Accuracy Deviation=0.010161915564400882
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.47085201793721976,0.5291479820627802
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.163816805946337,-2.1533944725854455
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.521305963276815,0.47869403672318495
+Average Joint Probability Histogram=
+  true,false
+  -3406.808683214122,-3356.0664713831047
+
+  Evaluating fold=4
+    Training. Fold= 0 1 2 3 5 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1318
+Total Correct=1160
+Total Accuracy=0.8801213960546282
+95% Confidence Interval=0.8801213960546282 +/- 0.01753640206000346
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1023,16
+  false,142,137
+Macro-averaged Precision=0.8867682122920699
+Macro-averaged Recall=0.737820002000821
+Macro-averaged F=0.7812857094844391
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=2636
+  True Positive=1160
+  False Negative=158
+  False Positive=158
+  True Negative=1160
+  Positive Reference=1318
+  Positive Response=1318
+  Negative Reference=1318
+  Negative Response=1318
+  Accuracy=0.8801213960546282
+  Recall=0.8801213960546282
+  Precision=0.8801213960546282
+  Rejection Recall=0.8801213960546282
+  Rejection Precision=0.8801213960546282
+  F(1)=0.8801213960546282
+  Fowlkes-Mallows=1318.0
+  Jaccard Coefficient=0.7859078590785907
+  Yule's Q=0.9635712013448479
+  Yule's Y=0.7602427921092565
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7602427921092565
+  kappa Unbiased=0.7602427921092565
+  kappa No Prevalence=0.7602427921092565
+  chi Squared=1523.52655538695
+  phi Squared=0.5779691029540781
+  Accuracy Deviation=0.006326586129715402
+Random Accuracy=0.7213774031099679
+Random Accuracy Unbiased=0.7259470250828379
+kappa=0.569745579563721
+kappa Unbiased=0.5625714189688784
+kappa No Prevalence =0.7602427921092565
+Reference Entropy=0.7446900400446076
+Response Entropy=0.5180015525816561
+Cross Entropy=0.7979860184412714
+Joint Entropy=1.0467958872047676
+Conditional Entropy=0.30210584716016026
+Mutual Information=0.2158957054214961
+Kullback-Liebler Divergence=0.05329597839666375
+chi Squared=484.92497613552416
+chi-Squared Degrees of Freedom=1
+phi Squared=0.3679248680846162
+Cramer's V=0.6065681067156566
+lambda A=0.4336917562724014
+lambda B=0.0
+Average Reference Rank=NaN
+Average Score Reference=-2.09103350799178
+Average Conditional Probability Reference=0.8806906118665965
+Average Log2 Joint Probability Reference=-2995.9901828753564
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1318
+  True Positive=1023
+  False Negative=16
+  False Positive=142
+  True Negative=137
+  Positive Reference=1039
+  Positive Response=1165
+  Negative Reference=279
+  Negative Response=153
+  Accuracy=0.8801213960546282
+  Recall=0.9846005774783445
+  Precision=0.8781115879828326
+  Rejection Recall=0.4910394265232975
+  Rejection Precision=0.8954248366013072
+  F(1)=0.9283121597096189
+  Fowlkes-Mallows=1100.197709504978
+  Jaccard Coefficient=0.8662150719729044
+  Yule's Q=0.9680950408290796
+  Yule's Y=0.7741147976540901
+  Reference Likelihood=0.7883156297420334
+  Response Likelihood=0.8839150227617603
+  Random Accuracy=0.7213774031099679
+  Random Accuracy Unbiased=0.7259470250828379
+  kappa=0.569745579563721
+  kappa Unbiased=0.5625714189688784
+  kappa No Prevalence=0.7602427921092565
+  chi Squared=484.9249761355241
+  phi Squared=0.36792486808461616
+  Accuracy Deviation=0.00894714390816503
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.015399422521655439,0.9846005774783445
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0771315955541363,-2.2971002128965066
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9840907681771682,0.015909231822831844
+Average Joint Probability Histogram=
+  true,false
+  -2929.8326722549414,-3235.867765092079
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1318
+  True Positive=137
+  False Negative=142
+  False Positive=16
+  True Negative=1023
+  Positive Reference=279
+  Positive Response=153
+  Negative Reference=1039
+  Negative Response=1165
+  Accuracy=0.8801213960546282
+  Recall=0.4910394265232975
+  Precision=0.8954248366013072
+  Rejection Recall=0.9846005774783445
+  Rejection Precision=0.8781115879828326
+  F(1)=0.6342592592592593
+  Fowlkes-Mallows=206.60832509848194
+  Jaccard Coefficient=0.46440677966101696
+  Yule's Q=0.9680950408290796
+  Yule's Y=0.7741147976540901
+  Reference Likelihood=0.2116843702579666
+  Response Likelihood=0.11608497723823975
+  Random Accuracy=0.7213774031099679
+  Random Accuracy Unbiased=0.7259470250828379
+  kappa=0.569745579563721
+  kappa Unbiased=0.5625714189688784
+  kappa No Prevalence=0.7602427921092565
+  chi Squared=484.9249761355241
+  phi Squared=0.36792486808461616
+  Accuracy Deviation=0.00894714390816503
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.4910394265232975,0.5089605734767025
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1595887860286855,-2.1428044292201363
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.5043730526734876,0.4956269473265122
+Average Joint Probability Histogram=
+  true,false
+  -3305.783601495106,-3242.3617009205327
+
+  Evaluating fold=5
+    Training. Fold= 0 1 2 3 4 6 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1582
+Total Correct=1401
+Total Accuracy=0.8855878634639697
+95% Confidence Interval=0.8855878634639697 +/- 0.01568572900699092
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1229,18
+  false,163,172
+Macro-averaged Precision=0.8940827283726558
+Macro-averaged Recall=0.7494990963386755
+Macro-averaged F=0.793325754705065
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=3164
+  True Positive=1401
+  False Negative=181
+  False Positive=181
+  True Negative=1401
+  Positive Reference=1582
+  Positive Response=1582
+  Negative Reference=1582
+  Negative Response=1582
+  Accuracy=0.8855878634639697
+  Recall=0.8855878634639697
+  Precision=0.8855878634639697
+  Rejection Recall=0.8855878634639697
+  Rejection Precision=0.8855878634639697
+  F(1)=0.8855878634639697
+  Fowlkes-Mallows=1582.0
+  Jaccard Coefficient=0.7946681792399319
+  Yule's Q=0.9671661416683621
+  Yule's Y=0.7711757269279393
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7711757269279393
+  kappa Unbiased=0.7711757269279393
+  kappa No Prevalence=0.7711757269279393
+  chi Squared=1881.6687737041718
+  phi Squared=0.5947120018028356
+  Accuracy Deviation=0.005658921096274393
+Random Accuracy=0.7190061708762132
+Random Accuracy Unbiased=0.723206594095074
+kappa=0.592830430145752
+kappa Unbiased=0.5866515094101301
+kappa No Prevalence =0.7711757269279393
+Reference Entropy=0.7448282962122237
+Response Entropy=0.5296515129150738
+Cross Entropy=0.7929876340845292
+Joint Entropy=1.0423400006343662
+Conditional Entropy=0.2975117044221425
+Mutual Information=0.23213980849293117
+Kullback-Liebler Divergence=0.04815933787230536
+chi Squared=622.1897450225676
+chi-Squared Degrees of Freedom=1
+phi Squared=0.3932931384466294
+Cramer's V=0.6271308782436321
+lambda A=0.4597014925373134
+lambda B=0.04736842105263158
+Average Reference Rank=NaN
+Average Score Reference=-2.0898941240465803
+Average Conditional Probability Reference=0.8857236180886334
+Average Log2 Joint Probability Reference=-3031.2496891790665
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1582
+  True Positive=1229
+  False Negative=18
+  False Positive=163
+  True Negative=172
+  Positive Reference=1247
+  Positive Response=1392
+  Negative Reference=335
+  Negative Response=190
+  Accuracy=0.8855878634639697
+  Recall=0.9855653568564555
+  Precision=0.8829022988505747
+  Rejection Recall=0.5134328358208955
+  Rejection Precision=0.9052631578947369
+  F(1)=0.9314134141720348
+  Fowlkes-Mallows=1317.5067362256636
+  Jaccard Coefficient=0.8716312056737588
+  Yule's Q=0.9726206362389302
+  Yule's Y=0.7892094777286556
+  Reference Likelihood=0.7882427307206068
+  Response Likelihood=0.8798988621997471
+  Random Accuracy=0.7190061708762133
+  Random Accuracy Unbiased=0.723206594095074
+  kappa=0.5928304301457519
+  kappa Unbiased=0.5866515094101301
+  kappa No Prevalence=0.7711757269279393
+  chi Squared=622.1897450225676
+  phi Squared=0.3932931384466294
+  Accuracy Deviation=0.00800292296275047
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.014434643143544507,0.9855653568564555
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0759990074283494,-2.2937175021443883
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9852292206820127,0.014770779317987466
+Average Joint Probability Histogram=
+  true,false
+  -2929.488136962654,-3235.338366244001
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1582
+  True Positive=172
+  False Negative=163
+  False Positive=18
+  True Negative=1229
+  Positive Reference=335
+  Positive Response=190
+  Negative Reference=1247
+  Negative Response=1392
+  Accuracy=0.8855878634639697
+  Recall=0.5134328358208955
+  Precision=0.9052631578947369
+  Rejection Recall=0.9855653568564555
+  Rejection Precision=0.8829022988505747
+  F(1)=0.6552380952380952
+  Fowlkes-Mallows=252.28951623085732
+  Jaccard Coefficient=0.48725212464589235
+  Yule's Q=0.9726206362389302
+  Yule's Y=0.7892094777286556
+  Reference Likelihood=0.21175726927939317
+  Response Likelihood=0.12010113780025285
+  Random Accuracy=0.7190061708762132
+  Random Accuracy Unbiased=0.723206594095074
+  kappa=0.592830430145752
+  kappa Unbiased=0.5866515094101301
+  kappa No Prevalence=0.7711757269279393
+  chi Squared=622.1897450225676
+  phi Squared=0.3932931384466294
+  Accuracy Deviation=0.00800292296275047
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5134328358208955,0.48656716417910445
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1614283113889363,-2.1416171402344397
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4846748488783621,0.5153251511216378
+Average Joint Probability Histogram=
+  true,false
+  -3487.0979266607524,-3410.0456760860584
+
+  Evaluating fold=6
+    Training. Fold= 0 1 2 3 4 5 7 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=1845
+Total Correct=1631
+Total Accuracy=0.884010840108401
+95% Confidence Interval=0.884010840108401 +/- 0.014611519527363318
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1431,24
+  false,190,200
+Macro-averaged Precision=0.8878227725389971
+Macro-averaged Recall=0.748162833729844
+Macro-averaged F=0.7909474633921121
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=3690
+  True Positive=1631
+  False Negative=214
+  False Positive=214
+  True Negative=1631
+  Positive Reference=1845
+  Positive Response=1845
+  Negative Reference=1845
+  Negative Response=1845
+  Accuracy=0.884010840108401
+  Recall=0.884010840108401
+  Precision=0.884010840108401
+  Rejection Recall=0.884010840108401
+  Rejection Precision=0.884010840108401
+  F(1)=0.884010840108401
+  Fowlkes-Mallows=1845.0
+  Jaccard Coefficient=0.7921321029626032
+  Yule's Q=0.9661517163798242
+  Yule's Y=0.7680216802168022
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7680216802168021
+  kappa Unbiased=0.7680216802168021
+  kappa No Prevalence=0.7680216802168021
+  chi Squared=2176.573441734417
+  phi Squared=0.5898573012830398
+  Accuracy Deviation=0.005271379867978704
+Random Accuracy=0.7185361447110407
+Random Accuracy Unbiased=0.7225837060538628
+kappa=0.5879074427779689
+kappa Unbiased=0.5818949267842238
+kappa No Prevalence =0.7680216802168021
+Reference Entropy=0.7441163072594044
+Response Entropy=0.5333980878015046
+Cross Entropy=0.7902989188445125
+Joint Entropy=1.0510413667304175
+Conditional Entropy=0.3069250594710131
+Mutual Information=0.22647302833049154
+Kullback-Liebler Divergence=0.046182611585108294
+chi Squared=710.2748028506279
+chi-Squared Degrees of Freedom=1
+phi Squared=0.38497279287296904
+Cramer's V=0.6204617577844497
+lambda A=0.4512820512820513
+lambda B=0.044642857142857144
+Average Reference Rank=NaN
+Average Score Reference=-2.090590944785545
+Average Conditional Probability Reference=0.883784372254265
+Average Log2 Joint Probability Reference=-2969.551293024592
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1845
+  True Positive=1431
+  False Negative=24
+  False Positive=190
+  True Negative=200
+  Positive Reference=1455
+  Positive Response=1621
+  Negative Reference=390
+  Negative Response=224
+  Accuracy=0.884010840108401
+  Recall=0.9835051546391752
+  Precision=0.8827884022208513
+  Rejection Recall=0.5128205128205128
+  Rejection Precision=0.8928571428571429
+  F(1)=0.9304291287386215
+  Fowlkes-Mallows=1535.7587701198388
+  Jaccard Coefficient=0.8699088145896656
+  Yule's Q=0.9686339248865043
+  Yule's Y=0.775843060159139
+  Reference Likelihood=0.7886178861788617
+  Response Likelihood=0.8785907859078591
+  Random Accuracy=0.7185361447110407
+  Random Accuracy Unbiased=0.7225837060538627
+  kappa=0.5879074427779689
+  kappa Unbiased=0.581894926784224
+  kappa No Prevalence=0.7680216802168021
+  chi Squared=710.2748028506279
+  phi Squared=0.38497279287296904
+  Accuracy Deviation=0.007454856901715979
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.016494845360824743,0.9835051546391752
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0774902005795757,-2.2948472204238217
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.982922932959998,0.017077067040002294
+Average Joint Probability Histogram=
+  true,false
+  -2875.7733563603315,-3176.5274598187425
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=1845
+  True Positive=200
+  False Negative=190
+  False Positive=24
+  True Negative=1431
+  Positive Reference=390
+  Positive Response=224
+  Negative Reference=1455
+  Negative Response=1621
+  Accuracy=0.884010840108401
+  Recall=0.5128205128205128
+  Precision=0.8928571428571429
+  Rejection Recall=0.9835051546391752
+  Rejection Precision=0.8827884022208513
+  F(1)=0.6514657980456027
+  Fowlkes-Mallows=295.5672512305786
+  Jaccard Coefficient=0.4830917874396135
+  Yule's Q=0.9686339248865043
+  Yule's Y=0.775843060159139
+  Reference Likelihood=0.21138211382113822
+  Response Likelihood=0.12140921409214092
+  Random Accuracy=0.7185361447110407
+  Random Accuracy Unbiased=0.7225837060538628
+  kappa=0.5879074427779689
+  kappa Unbiased=0.5818949267842238
+  kappa No Prevalence=0.7680216802168021
+  chi Squared=710.2748028506279
+  phi Squared=0.38497279287296904
+  Accuracy Deviation=0.007454856901715979
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5128205128205128,0.48717948717948717
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1610092404341197,-2.1394667981693516
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.48607871960942867,0.5139212803905712
+Average Joint Probability Histogram=
+  true,false
+  -3406.907390848338,-3319.4151336565433
+
+  Evaluating fold=7
+    Training. Fold= 0 1 2 3 4 5 6 8 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=2107
+Total Correct=1865
+Total Accuracy=0.8851447555766493
+95% Confidence Interval=0.8851447555766493 +/- 0.013614646484441332
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1636,26
+  false,216,229
+Macro-averaged Precision=0.8907042730699191
+Macro-averaged Recall=0.7494814694628105
+Macro-averaged F=0.7927091633466136
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=4214
+  True Positive=1865
+  False Negative=242
+  False Positive=242
+  True Negative=1865
+  Positive Reference=2107
+  Positive Response=2107
+  Negative Reference=2107
+  Negative Response=2107
+  Accuracy=0.8851447555766493
+  Recall=0.8851447555766493
+  Precision=0.8851447555766493
+  Rejection Recall=0.8851447555766493
+  Rejection Precision=0.8851447555766493
+  F(1)=0.8851447555766493
+  Fowlkes-Mallows=2107.0
+  Jaccard Coefficient=0.7939548744146445
+  Yule's Q=0.9668829551324662
+  Yule's Y=0.7702895111532986
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7702895111532986
+  kappa Unbiased=0.7702895111532986
+  kappa No Prevalence=0.7702895111532986
+  chi Squared=2500.359753203607
+  phi Squared=0.5933459309927877
+  Accuracy Deviation=0.0049117392105132935
+Random Accuracy=0.7188952953395792
+Random Accuracy Unbiased=0.7229611152194788
+kappa=0.5914147201410316
+kappa Unbiased=0.5854183266932271
+kappa No Prevalence =0.7702895111532986
+Reference Entropy=0.7437716870103599
+Response Entropy=0.5323004781732784
+Cross Entropy=0.7902491444363358
+Joint Entropy=1.0465225311828124
+Conditional Entropy=0.30275084417245224
+Mutual Information=0.22954963400082623
+Kullback-Liebler Divergence=0.04647745742597589
+chi Squared=821.5064571681985
+chi-Squared Degrees of Freedom=1
+phi Squared=0.38989390468353036
+Cramer's V=0.6244148498262436
+lambda A=0.45617977528089887
+lambda B=0.050980392156862744
+Average Reference Rank=NaN
+Average Score Reference=-2.0895643457929736
+Average Conditional Probability Reference=0.8849924603403625
+Average Log2 Joint Probability Reference=-2970.030992199412
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2107
+  True Positive=1636
+  False Negative=26
+  False Positive=216
+  True Negative=229
+  Positive Reference=1662
+  Positive Response=1852
+  Negative Reference=445
+  Negative Response=255
+  Accuracy=0.8851447555766493
+  Recall=0.9843561973525873
+  Precision=0.8833693304535637
+  Rejection Recall=0.5146067415730337
+  Rejection Precision=0.8980392156862745
+  F(1)=0.9311326124075129
+  Fowlkes-Mallows=1754.429821907961
+  Jaccard Coefficient=0.8711395101171459
+  Yule's Q=0.9704623152579814
+  Yule's Y=0.781841012396442
+  Reference Likelihood=0.7887992406264831
+  Response Likelihood=0.8789748457522544
+  Random Accuracy=0.7188952953395792
+  Random Accuracy Unbiased=0.7229611152194788
+  kappa=0.5914147201410316
+  kappa Unbiased=0.5854183266932271
+  kappa No Prevalence=0.7702895111532986
+  chi Squared=821.5064571681985
+  phi Squared=0.38989390468353036
+  Accuracy Deviation=0.006946248206347618
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.015643802647412757,0.9843561973525873
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0765404553265188,-2.294253895706929
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.983835419394311,0.01616458060568955
+Average Joint Probability Histogram=
+  true,false
+  -2893.800879742754,-3201.4950729197285
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2107
+  True Positive=229
+  False Negative=216
+  False Positive=26
+  True Negative=1636
+  Positive Reference=445
+  Positive Response=255
+  Negative Reference=1662
+  Negative Response=1852
+  Accuracy=0.8851447555766493
+  Recall=0.5146067415730337
+  Precision=0.8980392156862745
+  Rejection Recall=0.9843561973525873
+  Rejection Precision=0.8833693304535637
+  F(1)=0.6542857142857142
+  Fowlkes-Mallows=336.8605052540294
+  Jaccard Coefficient=0.4861995753715499
+  Yule's Q=0.9704623152579814
+  Yule's Y=0.781841012396442
+  Reference Likelihood=0.21120075937351684
+  Response Likelihood=0.12102515424774561
+  Random Accuracy=0.7188952953395793
+  Random Accuracy Unbiased=0.7229611152194788
+  kappa=0.5914147201410314
+  kappa Unbiased=0.5854183266932271
+  kappa No Prevalence=0.7702895111532986
+  chi Squared=821.5064571681985
+  phi Squared=0.38989390468353036
+  Accuracy Deviation=0.006946248206347618
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5146067415730337,0.4853932584269663
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1619663083906286,-2.1382063816474424
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.48416933280045016,0.5158306671995497
+Average Joint Probability Histogram=
+  true,false
+  -3348.170380670071,-3254.7376144531686
+
+  Evaluating fold=8
+    Training. Fold= 0 1 2 3 4 5 6 7 9
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=2369
+Total Correct=2100
+Total Accuracy=0.8864499788940481
+95% Confidence Interval=0.8864499788940481 +/- 0.012775981305280633
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,1839,30
+  false,239,261
+Macro-averaged Precision=0.8909463897681157
+Macro-averaged Recall=0.7529743178170145
+Macro-averaged F=0.7958855595169498
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=4738
+  True Positive=2100
+  False Negative=269
+  False Positive=269
+  True Negative=2100
+  Positive Reference=2369
+  Positive Response=2369
+  Negative Reference=2369
+  Negative Response=2369
+  Accuracy=0.8864499788940481
+  Recall=0.8864499788940481
+  Precision=0.8864499788940481
+  Rejection Recall=0.8864499788940481
+  Rejection Precision=0.8864499788940481
+  F(1)=0.8864499788940481
+  Fowlkes-Mallows=2369.0
+  Jaccard Coefficient=0.796057619408643
+  Yule's Q=0.9677129976813559
+  Yule's Y=0.7728999577880963
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.7728999577880962
+  kappa Unbiased=0.7728999577880962
+  kappa No Prevalence=0.7728999577880962
+  chi Squared=2830.3596454200083
+  phi Squared=0.5973743447488409
+  Accuracy Deviation=0.004609175008814538
+Random Accuracy=0.7179555255096923
+Random Accuracy Unbiased=0.7218471636861452
+kappa=0.5974038445136992
+kappa Unbiased=0.5917711190338993
+kappa No Prevalence =0.7728999577880962
+Reference Entropy=0.7435030961652022
+Response Entropy=0.5374601034051689
+Cross Entropy=0.7876694155888536
+Joint Entropy=1.0478795998151795
+Conditional Entropy=0.30437650364997726
+Mutual Information=0.23308359975519158
+Kullback-Liebler Divergence=0.0441663194236514
+chi Squared=937.1706789087193
+chi-Squared Degrees of Freedom=1
+phi Squared=0.39559758501845477
+Cramer's V=0.6289654879390878
+lambda A=0.462
+lambda B=0.07560137457044673
+Average Reference Rank=NaN
+Average Score Reference=-2.090494330938189
+Average Conditional Probability Reference=0.8859918514600575
+Average Log2 Joint Probability Reference=-2961.5306612219524
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2369
+  True Positive=1839
+  False Negative=30
+  False Positive=239
+  True Negative=261
+  Positive Reference=1869
+  Positive Response=2078
+  Negative Reference=500
+  Negative Response=291
+  Accuracy=0.8864499788940481
+  Recall=0.9839486356340289
+  Precision=0.884985563041386
+  Rejection Recall=0.522
+  Rejection Precision=0.8969072164948454
+  F(1)=0.9318469723840892
+  Fowlkes-Mallows=1970.731336331769
+  Jaccard Coefficient=0.8723908918406073
+  Yule's Q=0.9705634210477698
+  Yule's Y=0.7821789848274455
+  Reference Likelihood=0.7889404812157028
+  Response Likelihood=0.877163360067539
+  Random Accuracy=0.7179555255096923
+  Random Accuracy Unbiased=0.7218471636861452
+  kappa=0.5974038445136992
+  kappa Unbiased=0.5917711190338993
+  kappa No Prevalence=0.7728999577880962
+  chi Squared=937.1706789087193
+  phi Squared=0.39559758501845477
+  Accuracy Deviation=0.00651835780881665
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.016051364365971106,0.9839486356340289
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.077292352484828,-2.296180714645554
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.983191645583809,0.016808354416191728
+Average Joint Probability Histogram=
+  true,false
+  -2892.657696211341,-3200.277516684749
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2369
+  True Positive=261
+  False Negative=239
+  False Positive=30
+  True Negative=1839
+  Positive Reference=500
+  Positive Response=291
+  Negative Reference=1869
+  Negative Response=2078
+  Accuracy=0.8864499788940481
+  Recall=0.522
+  Precision=0.8969072164948454
+  Rejection Recall=0.9839486356340289
+  Rejection Precision=0.884985563041386
+  F(1)=0.6599241466498104
+  Fowlkes-Mallows=381.444622455213
+  Jaccard Coefficient=0.49245283018867925
+  Yule's Q=0.9705634210477698
+  Yule's Y=0.7821789848274455
+  Reference Likelihood=0.21105951878429718
+  Response Likelihood=0.12283663993246095
+  Random Accuracy=0.7179555255096923
+  Random Accuracy Unbiased=0.7218471636861452
+  kappa=0.5974038445136992
+  kappa Unbiased=0.5917711190338993
+  kappa No Prevalence=0.7728999577880962
+  chi Squared=937.1706789087193
+  phi Squared=0.39559758501845477
+  Accuracy Deviation=0.00651835780881665
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.522,0.478
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1633546179211076,-2.139843326396839
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.47734097897452266,0.522659021025477
+Average Joint Probability Histogram=
+  true,false
+  -3314.116914550106,-3218.9778044315126
+
+  Evaluating fold=9
+    Training. Fold= 0 1 2 3 4 5 6 7 8
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=Naive Bayes with 5-gram Char Smoothing
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=2631
+Total Correct=2334
+Total Accuracy=0.887115165336374
+95% Confidence Interval=0.887115165336374 +/- 0.012092147880882987
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,2044,32
+  false,265,290
+Macro-averaged Precision=0.8929264100239678
+Macro-averaged Recall=0.7535541321668489
+Macro-averaged F=0.7968072976054732
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=5262
+  True Positive=2334
+  False Negative=297
+  False Positive=297
+  True Negative=2334
+  Positive Reference=2631
+  Positive Response=2631
+  Negative Reference=2631
+  Negative Response=2631
+  Accuracy=0.887115165336374
+  Recall=0.887115165336374
+  Precision=0.887115165336374
+  Rejection Recall=0.887115165336374
+  Rejection Precision=0.887115165336374
+  F(1)=0.887115165336374
+  Fowlkes-Mallows=2631.0
+  Jaccard Coefficient=0.7971311475409836
+  Yule's Q=0.9681312338945024
+  Yule's Y=0.774230330672748
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=0.774230330672748
+  kappa Unbiased=0.774230330672748
+  kappa No Prevalence=0.774230330672748
+  chi Squared=3154.2143671607755
+  phi Squared=0.5994326049336327
+  Accuracy Deviation=0.004362469268205562
+Random Accuracy=0.7183008311999678
+Random Accuracy Unbiased=0.7222222222222221
+kappa=0.5992716799822766
+kappa Unbiased=0.5936145952109466
+kappa No Prevalence =0.774230330672748
+Reference Entropy=0.7432878742689848
+Response Entropy=0.5361833097704736
+Cross Entropy=0.7878813675662406
+Joint Entropy=1.0445508502524616
+Conditional Entropy=0.30126297598347695
+Mutual Information=0.23492033378699673
+Kullback-Liebler Divergence=0.044593493297255815
+chi Squared=1048.4862811977346
+chi-Squared Degrees of Freedom=1
+phi Squared=0.3985124595962503
+Cramer's V=0.631278432703233
+lambda A=0.4648648648648649
+lambda B=0.07763975155279502
+Average Reference Rank=NaN
+Average Score Reference=-2.089439163358571
+Average Conditional Probability Reference=0.8865610258972496
+Average Log2 Joint Probability Reference=-2936.9677531047932
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2631
+  True Positive=2044
+  False Negative=32
+  False Positive=265
+  True Negative=290
+  Positive Reference=2076
+  Positive Response=2309
+  Negative Reference=555
+  Negative Response=322
+  Accuracy=0.887115165336374
+  Recall=0.9845857418111753
+  Precision=0.8852317020355132
+  Rejection Recall=0.5225225225225225
+  Rejection Precision=0.9006211180124224
+  F(1)=0.9322690992018242
+  Fowlkes-Mallows=2189.402658260924
+  Jaccard Coefficient=0.8731311405382315
+  Yule's Q=0.9717916306300313
+  Yule's Y=0.7863402722098038
+  Reference Likelihood=0.7890535917901939
+  Response Likelihood=0.8776130748764728
+  Random Accuracy=0.7183008311999678
+  Random Accuracy Unbiased=0.7222222222222221
+  kappa=0.5992716799822766
+  kappa Unbiased=0.5936145952109466
+  kappa No Prevalence=0.774230330672748
+  chi Squared=1048.4862811977348
+  phi Squared=0.3985124595962504
+  Accuracy Deviation=0.006169463204532137
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.015414258188824663,0.9845857418111753
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0764294001595114,-2.29482762999611
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9836971757617036,0.016302824238297337
+Average Joint Probability Histogram=
+  true,false
+  -2879.2496647941807,-3184.7712617928382
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=2631
+  True Positive=290
+  False Negative=265
+  False Positive=32
+  True Negative=2044
+  Positive Reference=555
+  Positive Response=322
+  Negative Reference=2076
+  Negative Response=2309
+  Accuracy=0.887115165336374
+  Recall=0.5225225225225225
+  Precision=0.9006211180124224
+  Rejection Recall=0.9845857418111753
+  Rejection Precision=0.8852317020355132
+  F(1)=0.6613454960091221
+  Fowlkes-Mallows=422.74105549378567
+  Jaccard Coefficient=0.4940374787052811
+  Yule's Q=0.9717916306300313
+  Yule's Y=0.7863402722098038
+  Reference Likelihood=0.21094640820980615
+  Response Likelihood=0.12238692512352718
+  Random Accuracy=0.7183008311999678
+  Random Accuracy Unbiased=0.7222222222222223
+  kappa=0.5992716799822766
+  kappa Unbiased=0.5936145952109463
+  kappa No Prevalence=0.774230330672748
+  chi Squared=1048.4862811977348
+  phi Squared=0.3985124595962504
+  Accuracy Deviation=0.006169463204532137
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.5225225225225225,0.4774774774774775
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.1617597383415394,-2.138102710027485
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.4767806806227578,0.5232193193772418
+Average Joint Probability Histogram=
+  true,false
+  -3245.009317912728,-3152.8646023530273
+

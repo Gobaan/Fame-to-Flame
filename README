@@ -1,0 +1,7 @@
+This is the code for my fourth year design project, with Nathan, Yubin and Max.
+
+To install run sudo ./install.sh it should fetch all the dependencies.
+
+Then run
+   sudo python frontend/soblogitsgood/soblogsitsgood/webserver.py
+   

@@ -1,0 +1,1 @@
+java -cp sentimentDemo.jar:../../../lingpipe-3.9.2.jar PolarityWhole reviews/

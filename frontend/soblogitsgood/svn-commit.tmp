@@ -1,0 +1,11 @@
+Categorizations with asynchronous fetching.
+Polarize default, asynchronous.
+
+--This line, and those below, will be ignored--
+
+M    soblogitsgood/config/routing.py
+M    soblogitsgood/controllers/metasearch.py
+M    soblogitsgood/public/styles/style.css
+M    soblogitsgood/templates/sbig.mako
+M    soblogitsgood/templates/polarize.mako
+M    soblogitsgood/templates/metaresults.mako

@@ -1,0 +1,1 @@
+python SoBlogItsGood.py --query='iphone 3g' --category=Technology --sentiment=Good --startdate=05/01/2010 --enddate=05/04/2010 --randomseed=5 --limit=50

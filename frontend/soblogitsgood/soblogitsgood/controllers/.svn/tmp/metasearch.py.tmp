@@ -1,0 +1,400 @@
+import sqlite3
+import logging
+import threading
+import time
+
+from multiprocessing import Pool
+
+from pylons import request, response, session, tmpl_context as c, url
+from pylons.controllers.util import abort, redirect
+
+from soblogitsgood.lib.base import BaseController, render
+
+log = logging.getLogger(__name__)
+
+import sys
+sys.path.append("/usr/lib/pymodules/python2.6")
+sys.path.append("/usr/lib/python2.6/dist-packages/")
+sys.path.append("/usr/local/lib/python2.6/dist-packages/")
+sys.path.append("/usr/local/lib/python2.6/dist-packages/mechanize-0.2.4-py2.6.egg")
+sys.path.append("../../parsers/")
+sys.path.append("../../n-grams")
+import ngrams
+import wired
+import imdb
+import epinions
+import cnet
+import buzzillions
+
+
+USE_CACHE = True
+WORKER_TIMEOUT = 10
+positive_cutoff = .7
+negatice_cutoff = .6
+
+# Global map of ongoing queries to their ResultSets
+query_results = {}
+
+
+def alreadySearched(query, conn):
+    if not conn: return False
+    try:
+        cursor = conn.cursor ()
+        cursor.execute( """SELECT link, title, sentiment, content, score, max_score, title_section FROM search_results WHERE query="%s" """ % query);
+        return cursor.fetchone()
+    except Exception as e:
+        print "Error in alreadySearched:", e
+        return False;
+
+def retrieveCachedResults(query, conn):
+    if not conn: return False
+    try:
+        cursor = conn.cursor ()
+        cursor.execute( """SELECT link, title, sentiment, content, score, max_score, title_section FROM search_results WHERE query="%s" """ % query);
+        results = []
+        for row in cursor:
+            result = {}
+            result['link'] = row[0]
+            result['title'] = row[1]
+            result['sentiment'] = row[2]
+            result['content'] = row[3]
+            result['score'] = row[4]
+            result['max_score'] = row[5]
+            result['title_section'] = row[6]
+            results += [result]
+        return results
+    except Exception, e:
+        print "Error in retrieveCachedResults:", e
+        return None
+
+def store_mysql(searchquery, entries, conn):
+    if not conn: return
+    cursor = conn.cursor ()
+    print 'storing mysql ' + searchquery
+    for entry in entries:
+        query = ( """INSERT INTO search_results VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')"""
+                  % (searchquery,
+                     entry['link'],
+                     entry['title'].replace("'", ""),
+                     str(entry['sentiment']),
+                     entry['content'].replace("'", ""),
+                     str(entry['score']),
+                     str(entry['max_score']),
+                       ""))
+        try:
+            cursor.execute(query)
+            conn.commit()
+
+        except Exception, e:
+            print "Store mysql error:", e
+            print query
+
+
+class ResultSet:
+  """Keeps track of asynchronous results of queries"""
+  def __init__(self, num_callbacks=1):
+    self.mutex = threading.Lock()
+    self.event = threading.Event()
+    self.results = []
+    self.callback_limit = num_callbacks
+    self.callbacks = 0
+
+  def addResults(self, results):
+    self.callbacks += 1
+    self.mutex.acquire()
+    self.results.extend(results)
+    self.event.set()
+    self.mutex.release()
+
+  def tryGetResults(self):
+    self.mutex.acquire()
+    try:
+      if self.results:
+        # Return available results
+        ret = self.results
+        self.results = []
+        return ret
+      elif self.callbacks >= self.callback_limit:
+        # Indicate no more results
+         return None
+      else:
+        # No results at this time
+        return []
+    finally:
+      self.mutex.release()
+
+  def getResults(self):
+    self.mutex.acquire()
+    try:
+      if self.results:
+        # Return available results
+        ret = self.results
+        self.results = []
+        return ret
+      elif self.callbacks >= self.callback_limit:
+        # Indicate no more results
+        return None
+      else:
+        # Block until we have results
+        self.mutex.release()
+        self.event.wait(timeout=WORKER_TIMEOUT)
+        if not self.event.isSet():
+          print "worker timeout"
+          self.mutex.acquire()
+          return None
+        self.mutex.acquire()
+        self.event.clear()
+
+        ret = self.results
+        self.results = []
+        return ret
+    finally:
+      self.mutex.release()
+
+
+### For printing results ###
+def markupResult(result, query):
+  ret = """
+  <h3 class="resultLink">
+    <a href="%s">%s</a><br/>
+  </h3>
+  <p class="result">
+  """ % (result['link'], result['title'])
+
+  if result['sentiment'] >= 0.5:
+    ret += "<span class=\"good\">Sentiment: Good</span><br/>"
+  else:
+    ret += "<span class=\"bad\">Sentiment: Bad</span><br/>"
+
+  ret += result['content']
+  ret += "</p>"
+  return ret
+
+
+class MetasearchController(BaseController):
+    # Dispatchers return results as dictionaries with the following format:
+    #    title
+    #    link
+    #    content
+    #    score*
+    #    max_score*
+    #    title_section*
+    # Where asterisks mark optional fields
+  def __init__(self):
+    self.pool = Pool(len(self.getSearchers()))
+
+  def getSearchWrappers(self, query):
+    '''Generates functions that search for given query.
+       Inner functions only need to know which searcher to use.
+    '''
+    def wrapper(searcher):
+      return searcher(query)
+    return wrapper
+
+  def getCallbackWrapper(self, query, usingCache = False):
+    def wrapper(current_results):
+      for result in current_results:
+        try:
+          result['sentiment'] = float(result['score']) / float(result['max_score'])
+        except (KeyError, ValueError, TypeError):
+          result['sentiment'] = 1
+
+        if result['content'] is None:
+          result['content'] = ""
+      query_results['test'].addResults(current_results)
+      conn = None
+      conn = sqlite3.connect( "search_results")
+      if not usingCache:
+          store_mysql(query, current_results, conn)
+
+    #TODO: Cache results
+
+    return wrapper
+
+  def index(self):
+    # Return a rendered template
+    #return render('/metasearch.mako')
+    # or, return a string
+    c.service = "search"
+    return render('/index.mako')
+
+  def getSearchers(self):
+#    return [wired.search, imdb.search, buzzillions.search, cnet.search]
+    return [buzzillions.search, imdb.search, epinions.search, wired.search] #, wired.search, ]
+
+  def startAsyncSearch(self, query):
+    if USE_CACHE:
+      print 'using cache'
+      conn = None
+      conn = sqlite3.connect( "search_results")
+      query = query.replace(' ', '+')
+      if alreadySearched(query, conn):
+          print 'already searched'
+          query_results['test'] = ResultSet(1)
+          self.getCallbackWrapper(query, True)(retrieveCachedResults(query, conn))
+          print 'returning'
+          return
+    searchers = self.getSearchers()
+    query_results['test'] = ResultSet(len(searchers))
+    workers = [self.pool.apply_async(searcher,
+                                     (query,),
+                                     callback=self.getCallbackWrapper(query))
+               for searcher in searchers]
+
+  def getAllResults(self, query):
+    self.startAsyncSearch(query)
+    results = []
+    while True:
+      cur_results = query_results['test'].getResults()
+      if cur_results is None:
+        break
+      else:
+        results.extend(cur_results)
+
+    return results
+
+  def getasyncresults(self):
+    print "Get async: %s" % (request.params['query'])
+    try:
+      #results = query_results['test'].getResults()
+      results = query_results['test'].tryGetResults()
+
+      # Format nicely
+      if results is None:
+        print "No more results: %s" % (request.params['query'])
+        return None
+      elif results == []:
+        print "No results at this time: %s" % (request.params['query'])
+        return "RETRY"
+      else:
+        ret = ""
+        print "Got Results: %s" % (request.params['query'])
+        for result in results:
+          ret += markupResult(result, request.params['query'])
+
+        return ret
+    except KeyError, e:
+      # Async request for a non-existant query
+      return None
+
+  def search(self):
+    c.service = "search"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    self.startAsyncSearch(c.query)
+    return render('/metaresults.mako')
+
+  def polarize(self):
+    c.service = "polarize"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    c.results = self.getAllResults(c.query)
+
+    if len(c.results) == 0:
+      return render('/noresults.mako')
+
+    good_results = [hit for hit in c.results if hit['sentiment'] >= positive_cutoff]
+    bad_results = [hit for hit in c.results if hit['sentiment'] < negative_cutoff]
+
+    goodText = ''.join(hit['content'] for hit in good_results)
+    badText = ''.join(hit['content'] for hit in bad_results)
+    print "printing goodText"
+    print goodText
+    c.goodTerms, c.badTerms = ngrams.main(goodText, badText, ngrams.getWordsForDisplay)
+
+    c.goodResults = good_results
+    c.badResults = bad_results
+
+    return render('/polarize.mako')
+
+  def analysis(self):
+    c.service = "analysis"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    c.results = self.getAllResults(c.query)
+
+    if len(c.results) == 0:
+      return render('/noresults.mako')
+
+    good_results = [hit for hit in c.results if hit['sentiment'] >= positive_cutoff]
+    bad_results = [hit for hit in c.results if hit['sentiment'] < negative_cutoff]
+
+    sent_sum = 0.0
+    for hit in c.results:
+      sent_sum += hit['sentiment']
+
+    c.mean = sent_sum / len(c.results)
+    c.std_dev = 0
+    for hit in c.results:
+      c.std_dev += (hit['sentiment'] - c.mean)**2
+
+    c.std_dev = (c.std_dev/len(c.results))**(1.0/2)
+
+    c.verdict = ""
+    if c.std_dev < 0.15:
+      c.verdict = "Universal "
+    elif c.std_dev < 0.25:
+      c.verdict = "Generally agreed "
+    elif c.std_dev < 0.35:
+      c.verdict = "Disputed "
+    else:
+      c.verdict = "Hotly contested "
+
+    if c.mean < 0.35:
+      c.verdict += "disapproval"
+    elif c.mean < 0.65:
+      c.verdict += "mixed reviews"
+    else:
+      c.verdict += "approval"
+
+    goodText = ''.join(hit['content'] for hit in good_results)
+    badText = ''.join(hit['content'] for hit in bad_results)
+
+    c.goodTerms, c.badTerms = ngrams.main(goodText, badText,
+        ngrams.getWordsForDisplay)
+
+    c.goodResults = good_results
+    c.badResults = bad_results
+
+    return render('/analysis.mako')
+
+  def custom(self):
+    c.service = "custom"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    c.results = self.getAllResults(c.query)
+
+    if request.params.has_key('start'):
+      start = float(request.params['start'])
+    else:
+      start = 0.0
+
+    if request.params.has_key('end'):
+      end = float(request.params['end'])
+    else:
+      end = 1.0
+
+    c.results = [hit for hit in c.results \
+        if hit['sentiment'] <= end and hit['sentiment'] >= start]
+
+    if len(c.results) == 0:
+      return render('/noresults.mako')
+
+    c.start = start
+    c.end = end
+
+    return render('/custom.mako')
+
+# vi: set ts=2 sts=2 sw=2:

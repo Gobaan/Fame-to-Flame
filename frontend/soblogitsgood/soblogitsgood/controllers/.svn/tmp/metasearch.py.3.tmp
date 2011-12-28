@@ -1,0 +1,478 @@
+import sqlite3
+import logging
+import threading
+import time
+
+from xmltools import xml
+
+from multiprocessing import Pool
+
+from pylons import request, response, session, tmpl_context as c, url
+from pylons.controllers.util import abort, redirect, Response
+
+from soblogitsgood.lib.base import BaseController, render
+
+log = logging.getLogger(__name__)
+
+import sys
+sys.path.append("/usr/lib/pymodules/python2.6")
+sys.path.append("/usr/lib/python2.6/dist-packages/")
+sys.path.append("/usr/local/lib/python2.6/dist-packages/")
+sys.path.append("/usr/local/lib/python2.6/dist-packages/mechanize-0.2.4-py2.6.egg")
+sys.path.append("../../parsers/")
+sys.path.append("../../n-grams")
+import ngrams
+import amazon
+import wired
+import imdb
+import epinions
+import cnet
+import buzzillions
+
+
+USE_CACHE = False
+WORKER_TIMEOUT = 10
+positive_cutoff = .7
+negative_cutoff = .6
+
+# Global map of ongoing queries to their ResultSets
+query_results = {}
+
+"CREATE TABLE search_results(query, link, title, sentiment, content, score, max_score, product, parser)"
+def alreadySearched(query, conn):
+    if not conn: return False
+    try:
+        cursor = conn.cursor ()
+        cursor.execute( """SELECT * FROM search_results WHERE query="%s" """ % query)
+        return cursor.fetchone()
+    except Exception as e:
+        print "Error in alreadySearched:", e
+        return False;
+
+def retrieveCachedResults(query, conn):
+    if not conn: return False
+    cursor = conn.cursor ()
+    cursor.execute( """SELECT link, title, sentiment, content, score, max_score, product, parser FROM search_results WHERE query="%s" """ % query);
+    results = []
+    for row in cursor:
+        result = {}
+        result['link'] = row[0]
+        result['title'] = row[1]
+        result['sentiment'] = int(row[2])
+        result['content'] = int(row[3])
+        result['score'] = int(row[4])
+        result['max_score'] = int(row[5])
+        result['product'] = row[6]
+        result['parser'] = row[7]
+        results += [result]
+    return results
+
+def store_mysql(searchquery, entries, conn):
+    if not conn: return
+    cursor = conn.cursor ()
+    print 'storing mysql ' + searchquery
+    for entry in entries:
+        try:
+            args = (searchquery.encode("utf-8"),
+                         entry['link'].encode("utf-8"),
+                         entry['title'].replace("'", "").encode("utf-8"),
+                         str(entry['sentiment']).encode("utf-8"),
+                         entry['content'].replace("'", "").encode("utf-8"),
+                         str(entry['score']).encode("utf-8"),
+                         str(entry['max_score']).encode("utf-8"),
+                         str(entry['product']).encode("utf-8"),
+                         str(entry['parser']).encode("utf-8"))
+            query = ( """INSERT INTO search_results VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')""".encode("utf-8")
+                      % args)
+            cursor.execute(query)
+            conn.commit()
+
+        except Exception as e: #TODO Fix this exception
+            print "Store mysql error:", e
+            print query
+
+
+class ResultSet:
+  """Keeps track of asynchronous results of queries"""
+  def __init__(self, num_callbacks=1):
+    self.mutex = threading.Lock()
+    self.event = threading.Event()
+    self.results = []
+    self.callback_limit = num_callbacks
+    self.callbacks = 0
+
+  def addResults(self, results):
+    self.callbacks += 1
+    self.mutex.acquire()
+    self.results.extend(results)
+    self.event.set()
+    self.mutex.release()
+
+  def tryGetResults(self):
+    self.mutex.acquire()
+    try:
+      if self.results:
+        # Return available results
+        ret = self.results
+        self.results = []
+        return ret
+      elif self.callbacks >= self.callback_limit:
+        # Indicate no more results
+         return None
+      else:
+        # No results at this time
+        return []
+    finally:
+      self.mutex.release()
+
+  def getResults(self):
+    self.mutex.acquire()
+    try:
+      if self.results:
+        # Return available results
+        ret = self.results
+        self.results = []
+        return ret
+      elif self.callbacks >= self.callback_limit:
+        # Indicate no more results
+        return None
+      else:
+        # Block until we have results
+        self.mutex.release()
+        self.event.wait(timeout=WORKER_TIMEOUT)
+        if not self.event.isSet():
+          print "worker timeout"
+          self.mutex.acquire()
+          return None
+        self.mutex.acquire()
+        self.event.clear()
+
+        ret = self.results
+        self.results = []
+        return ret
+    finally:
+      self.mutex.release()
+
+
+### For printing results ###
+def summarize(text, term):
+    BACK = 50
+    LENGTH = 400
+    CHECK = 25
+    index = text.lower().find(term.lower())
+    if index < 0:
+      left = 0
+    # Find a chunk of text around the search term
+    left = max(0, index - BACK)
+    right = min(len(text), left + LENGTH)
+
+    # Find if the ranges are close to periods
+    lcheck = max(0, left - CHECK)
+    rcheck = right - CHECK
+
+    lstop = text.find(".", lcheck)
+    rstop = text.find(".", rcheck)
+
+    prefix = "..."
+    postfix = "..."
+
+    if abs(left - lstop) <= CHECK:
+      left = lstop + 1
+      prefix = ""
+    if abs(right - rstop) <= CHECK:
+      right = rstop + 1
+      postfix = ""
+    if left == 0:
+      prefix = ""
+    if right == len(text):
+      postfix = ""
+
+    return prefix + text[left:right].strip() + postfix# + "~%d, %d" % (left, right)
+
+def boldTerm(text, term):
+    out = text
+    index = -8
+    while (True):
+      index = out.lower().find(term.lower(), index + 8)
+      if index >= 0:
+        out = "%s<b>%s</b>%s" % (out[:index],
+                                 out[index:index + len(term)],
+                                 out[index + len(term):])
+      else:
+        break
+
+    return out
+
+def markupResult(result, query):
+  ret = """
+  <h3 class="resultLink">
+    <a href="%s">%s</a><br/>
+  </h3>
+  <p class="result">
+  """ % (result['link'], boldTerm(result['product'], query) + ' - ' + boldTerm(result['title'], query))
+
+  if result['sentiment'] >= positive_cutoff:
+    ret += "<span class=\"good\">Sentiment: Good</span><br/>"
+  elif result['sentiment'] < negative_cutoff:
+    ret += "<span class=\"bad\">Sentiment: Bad</span><br/>"
+  else:
+    ret += "<span class=\"neutral\">Sentiment: Neutral</span><br/>"
+
+  try:
+    ret += result['parser'] + "<br/>"
+  except KeyError, e:
+    print "KeyError: %s" % e
+  ret += boldTerm(summarize(result['content'], query), query)
+  ret += "</p>"
+  return ret
+
+
+class MetasearchController(BaseController):
+    # Dispatchers return results as dictionaries with the following format:
+    #    title
+    #    link
+    #    content
+    #    score*
+    #    max_score*
+    #    title_section*
+    # Where asterisks mark optional fields
+  def __init__(self):
+    self.pool = Pool(len(self.getSearchers()))
+
+  def getSearchWrappers(self, query):
+    '''Generates functions that search for given query.
+       Inner functions only need to know which searcher to use.
+    '''
+    def wrapper(searcher):
+      return searcher(query)
+    return wrapper
+
+  def getCallbackWrapper(self, query, fromCache = False):
+    def wrapper(current_results):
+      for result in current_results:
+        if result is None:
+            continue
+        try:
+          result['sentiment'] = float(result['score']) / float(result['max_score'])
+        except (KeyError, ValueError, TypeError):
+            result['sentiment'] = 1 #TODO Gobi plug in sentiment analysis
+
+        if result['content'] is None:
+          result['content'] = ""
+      query_results['test'].addResults(current_results)
+      conn = None
+      conn = sqlite3.connect( "search_results")
+      if not usingCache and USE_CACHE:
+          store_mysql(query, current_results, conn)
+
+    #TODO: Cache results
+
+    return wrapper
+
+  def index(self):
+    # Return a rendered template
+    #return render('/metasearch.mako')
+    # or, return a string
+    c.service = "search"
+    return render('/index.mako')
+
+  def getSearchers(self):
+    return [buzzillions.search, imdb.search, epinions.search, wired.search,
+            cnet.search]#, amazon.search]
+
+  def startAsyncSearch(self, query):
+    if USE_CACHE:
+      print 'using cache'
+      conn = None
+      conn = sqlite3.connect( "search_results")
+      query = query.replace(' ', '+')
+      if alreadySearched(query, conn):
+          print 'already searched'
+          query_results['test'] = ResultSet(1)
+          try:
+              self.getCallbackWrapper(query, True)(retrieveCachedResults(query, conn))
+              return
+          except Exception as e:
+              print "Some exception in getting cached results"
+              print e
+    searchers = self.getSearchers()
+    query_results['test'] = ResultSet(len(searchers))
+    [self.pool.apply_async(searcher,
+                           (query,),
+                           callback=self.getCallbackWrapper(query))
+     for searcher in searchers]
+
+  def getAllResults(self, query):
+    self.startAsyncSearch(query)
+    results = []
+    while True:
+      cur_results = query_results['test'].getResults()
+      if cur_results is None:
+        break
+      else:
+        results.extend(cur_results)
+
+    return results
+
+  def getasyncresults(self):
+    print "Get async: %s" % (request.params['query'])
+    try:
+      #results = query_results['test'].getResults()
+      results = query_results['test'].tryGetResults()
+
+      # Format nicely
+      if results is None:
+        print "No more results: %s" % (request.params['query'])
+        ret = "<results>\n<stop/></results>"
+      elif results == []:
+        print "No results at this time: %s" % (request.params['query'])
+        ret = "<results></results>"
+      else:
+        ret = "<results>\n"
+        print "Got Results: %s" % (request.params['query'])
+        for result in results:
+          ret += ("<result><source>%s</source><content>%s</content></result>\n"
+              % (result['parser'],
+                 xml.escape(markupResult(result, request.params['query']))))
+          #ret += markupResult(result, request.params['query'])
+
+        ret += "</results>"
+
+      response = Response(ret)
+      response.headers['content-type'] = "text/xml"
+      return response
+    except KeyError:
+      # Async request for a non-existant query
+      return None
+
+  def testajax(self):
+    s = """\
+<results>
+<result>
+<source>CNET</source>
+<content>cnetcontent</content>
+</result>
+</results>"""
+    r = Response(s)
+    r.headers['content-type'] = 'text/xml'
+    return r
+
+  def search(self):
+    c.service = "search"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    self.startAsyncSearch(c.query)
+    return render('/metaresults.mako')
+
+  def polarize(self):
+    c.service = "polarize"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    c.results = self.getAllResults(c.query)
+
+    if len(c.results) == 0:
+      return render('/noresults.mako')
+
+    good_results = [hit for hit in c.results if hit['sentiment'] >= positive_cutoff]
+    bad_results = [hit for hit in c.results if hit['sentiment'] < negative_cutoff]
+
+    goodText = ''.join(hit['content'] for hit in good_results)
+    badText = ''.join(hit['content'] for hit in bad_results)
+    c.goodTerms, c.badTerms = ngrams.main(goodText, badText, ngrams.getWordsForDisplay)
+
+    c.goodResults = good_results
+    c.badResults = bad_results
+
+    return render('/polarize.mako')
+
+  def analysis(self):
+    c.service = "analysis"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    c.results = self.getAllResults(c.query)
+
+    if len(c.results) == 0:
+      return render('/noresults.mako')
+
+    good_results = [hit for hit in c.results if hit['sentiment'] >= positive_cutoff]
+    bad_results = [hit for hit in c.results if hit['sentiment'] < negative_cutoff]
+
+    sent_sum = 0.0
+    for hit in c.results:
+      sent_sum += hit['sentiment']
+
+    c.mean = sent_sum / len(c.results)
+    c.std_dev = 0
+    for hit in c.results:
+      c.std_dev += (hit['sentiment'] - c.mean)**2
+
+    c.std_dev = (c.std_dev/len(c.results))**(1.0/2)
+
+    c.verdict = ""
+    if c.std_dev < 0.15:
+      c.verdict = "Universal "
+    elif c.std_dev < 0.25:
+      c.verdict = "Generally agreed "
+    elif c.std_dev < 0.35:
+      c.verdict = "Disputed "
+    else:
+      c.verdict = "Hotly contested "
+
+    if c.mean < 0.35:
+      c.verdict += "disapproval"
+    elif c.mean < 0.65:
+      c.verdict += "mixed reviews"
+    else:
+      c.verdict += "approval"
+
+    goodText = ''.join(hit['content'] for hit in good_results)
+    badText = ''.join(hit['content'] for hit in bad_results)
+
+    c.goodTerms, c.badTerms = ngrams.main(goodText, badText,
+        ngrams.getWordsForDisplay)
+
+    c.goodResults = good_results
+    c.badResults = bad_results
+
+    return render('/analysis.mako')
+
+  def custom(self):
+    c.service = "custom"
+    c.query = request.params['query']
+
+    if c.query.strip() == "":
+      return render('/index.mako')
+
+    c.results = self.getAllResults(c.query)
+
+    if request.params.has_key('start'):
+      start = float(request.params['start'])
+    else:
+      start = 0.0
+
+    if request.params.has_key('end'):
+      end = float(request.params['end'])
+    else:
+      end = 1.0
+
+    c.results = [hit for hit in c.results \
+        if hit['sentiment'] <= end and hit['sentiment'] >= start]
+
+    if len(c.results) == 0:
+      return render('/noresults.mako')
+
+    c.start = start
+    c.end = end
+
+    return render('/custom.mako')
+
+# vi: set ts=2 sts=2 sw=2:

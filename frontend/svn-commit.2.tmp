@@ -1,0 +1,6 @@
+Checkbox collapsing for analysis page
+
+--This line, and those below, will be ignored--
+
+M    soblogitsgood/soblogitsgood/templates/analysis.mako
+M    soblogitsgood/soblogitsgood/templates/sbig.mako

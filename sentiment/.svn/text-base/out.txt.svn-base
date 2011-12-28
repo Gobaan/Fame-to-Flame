@@ -1,0 +1,441 @@
+POLARITY DEMO
+  Data Directory=reviews
+Length: 69
+Length: 26
+    #Tokens=6430
+      the=1340
+      to=735
+      and=698
+      a=670
+      <br=656
+      I=650
+      of=476
+      is=458
+      it=355
+      that=303
+      />=286
+      in=283
+      with=254
+      this=252
+      for=239
+      on=209
+      have=181
+      was=181
+      but=172
+      you=170
+      The=164
+      my=153
+      not=148
+      are=144
+      as=132
+      be=132
+      has=96
+      or=92
+      so=85
+      at=83
+      about=82
+      all=82
+      one=80
+      an=77
+      from=74
+      like=74
+      if=70
+      just=70
+      This=69
+      very=68
+      -=67
+      had=65
+      up=65
+      Kindle=63
+      more=61
+      can=60
+      It=59
+      out=58
+      will=58
+      would=58
+      because=57
+      drive=57
+      who=57
+      book=56
+      by=53
+      than=53
+      which=53
+      I'm=51
+      battery=51
+      me=51
+      get=50
+      no=50
+      does=49
+      been=48
+      your=48
+      am=47
+      use=47
+      only=46
+      they=46
+      />-=45
+      don't=45
+      time=44
+      netbook=43
+      read=43
+      really=43
+      do=42
+      great=41
+      movie=41
+      new=41
+      some=41
+      could=40
+      it.=40
+      much=40
+      software=40
+      any=39
+      other=39
+      there=39
+      when=39
+      what=37
+      2=36
+      he=36
+      books=35
+      first=35
+      good=35
+      it's=35
+      little=35
+      love=35
+      />The=34
+      Edward=34
+      also=34
+      even=34
+      two=34
+      want=34
+      into=33
+      hard=32
+      her=32
+      she=32
+      their=32
+      WD=31
+      after=31
+      its=31
+      need=31
+      still=31
+      did=30
+      used=30
+      />I=29
+      find=29
+      think=29
+      way=29
+      I've=28
+      computer=28
+      them=28
+      without=28
+      TV=27
+      USB=27
+      how=27
+      make=27
+      most=27
+      see=27
+      7=26
+      Bella=26
+      his=26
+      old=26
+      over=26
+      can't=25
+      few=25
+      less=25
+      reading=25
+      we=25
+      found=24
+      life=24
+      say=24
+      screen=24
+      things=24
+      Amazon=23
+      Toshiba=23
+      around=23
+      before=23
+      it,=23
+      made=23
+      well=23
+      were=23
+      cable=22
+      doesn't=22
+      our=22
+      power=22
+      small=22
+      these=22
+      &=21
+      ASUS=21
+      back=21
+      easy=21
+      going=21
+      many=21
+      memory=21
+      people=21
+      thing=21
+      using=21
+      But=20
+      being=20
+      bit=20
+      didn't=20
+      every=20
+      long=20
+      look=20
+      reviews=20
+      then=20
+      DVD=19
+      If=19
+      My=19
+      Windows=19
+      book.=19
+      bought=19
+      buy=19
+      comes=19
+      down=19
+      far=19
+      feel=19
+      hours=19
+      now=19
+      should=19
+      something=19
+      take=19
+      too=19
+      work=19
+      works=19
+      He=18
+      In=18
+      better=18
+      drive.=18
+  Evaluating fold=0
+    Training. Fold= 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+    Compiling.
+    Testing.
+EVALUATION
+CLASSIFIER=8-gram Character LM Classifier
+BASE CLASSIFIER EVALUATION
+Categories=[true, false]
+Total Count=4
+Total Correct=4
+Total Accuracy=1.0
+95% Confidence Interval=1.0 +/- 0.0
+Confusion Matrix
+reference \ response
+  ,true,false
+  true,3,0
+  false,0,1
+Macro-averaged Precision=1.0
+Macro-averaged Recall=1.0
+Macro-averaged F=1.0
+Micro-averaged Results
+         the following symmetries are expected:
+           TP=TN, FN=FP
+           PosRef=PosResp=NegRef=NegResp
+           Acc=Prec=Rec=F
+  Total=8
+  True Positive=4
+  False Negative=0
+  False Positive=0
+  True Negative=4
+  Positive Reference=4
+  Positive Response=4
+  Negative Reference=4
+  Negative Response=4
+  Accuracy=1.0
+  Recall=1.0
+  Precision=1.0
+  Rejection Recall=1.0
+  Rejection Precision=1.0
+  F(1)=1.0
+  Fowlkes-Mallows=4.0
+  Jaccard Coefficient=1.0
+  Yule's Q=1.0
+  Yule's Y=1.0
+  Reference Likelihood=0.5
+  Response Likelihood=0.5
+  Random Accuracy=0.5
+  Random Accuracy Unbiased=0.5
+  kappa=1.0
+  kappa Unbiased=1.0
+  kappa No Prevalence=1.0
+  chi Squared=8.0
+  phi Squared=1.0
+  Accuracy Deviation=0.0
+Random Accuracy=0.625
+Random Accuracy Unbiased=0.625
+kappa=1.0
+kappa Unbiased=1.0
+kappa No Prevalence =1.0
+Reference Entropy=0.8112781244591328
+Response Entropy=0.8112781244591328
+Cross Entropy=0.8112781244591328
+Joint Entropy=0.8112781244591328
+Conditional Entropy=0.0
+Mutual Information=0.8112781244591327
+Kullback-Liebler Divergence=0.0
+chi Squared=4.0
+chi-Squared Degrees of Freedom=1
+phi Squared=1.0
+Cramer's V=1.0
+lambda A=1.0
+lambda B=1.0
+Average Reference Rank=NaN
+Average Score Reference=-2.0181937501224403
+Average Conditional Probability Reference=0.9999999142012601
+Average Log2 Joint Probability Reference=-3249.342641738333
+
+ONE VERSUS ALL EVALUATIONS BY CATEGORY
+
+
+CATEGORY[0]=true VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=4
+  True Positive=3
+  False Negative=0
+  False Positive=0
+  True Negative=1
+  Positive Reference=3
+  Positive Response=3
+  Negative Reference=1
+  Negative Response=1
+  Accuracy=1.0
+  Recall=1.0
+  Precision=1.0
+  Rejection Recall=1.0
+  Rejection Precision=1.0
+  F(1)=1.0
+  Fowlkes-Mallows=3.0
+  Jaccard Coefficient=1.0
+  Yule's Q=1.0
+  Yule's Y=1.0
+  Reference Likelihood=0.75
+  Response Likelihood=0.75
+  Random Accuracy=0.625
+  Random Accuracy Unbiased=0.625
+  kappa=1.0
+  kappa Unbiased=1.0
+  kappa No Prevalence=1.0
+  chi Squared=4.0
+  phi Squared=1.0
+  Accuracy Deviation=0.0
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  0.0,1.0
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.0289890772546397,-2.344048605712737
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  0.9999999996015952,3.984046879994916E-10
+Average Joint Probability Histogram=
+  true,false
+  -4020.685035961154,-4292.759277520495
+
+
+CATEGORY[1]=false VERSUS ALL
+
+First-Best Precision/Recall Evaluation
+  Total=4
+  True Positive=1
+  False Negative=0
+  False Positive=0
+  True Negative=3
+  Positive Reference=1
+  Positive Response=1
+  Negative Reference=3
+  Negative Response=3
+  Accuracy=1.0
+  Recall=1.0
+  Precision=1.0
+  Rejection Recall=1.0
+  Rejection Precision=1.0
+  F(1)=1.0
+  Fowlkes-Mallows=1.0
+  Jaccard Coefficient=1.0
+  Yule's Q=1.0
+  Yule's Y=1.0
+  Reference Likelihood=0.25
+  Response Likelihood=0.25
+  Random Accuracy=0.625
+  Random Accuracy Unbiased=0.625
+  kappa=1.0
+  kappa Unbiased=1.0
+  kappa No Prevalence=1.0
+  chi Squared=4.0
+  phi Squared=1.0
+  Accuracy Deviation=0.0
+Rank Histogram=
+  true,false
+  0,0
+Average Rank Histogram=
+  true,false
+  1.0,0.0
+Scored One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Score Histogram=
+  true,false
+  -2.031411804646744,-1.9858077687258413
+Conditional One Versus All
+  Area Under PR Curve (interpolated)=0.0
+  Area Under PR Curve (uninterpolated)=0.0
+  Area Under ROC Curve (interpolated)=0.0
+  Area Under ROC Curve (uninterpolated)=0.0
+  Average Precision=NaN
+  Maximum F(1) Measure=0.0
+  BEP (Precision-Recall break even point)=0.0
+  Reciprocal Rank=0.0
+  Precision at 5=NaN
+  Precision at 10=NaN
+  Precision at 25=NaN
+  Precision at 100=NaN
+  Precision at 500=NaN
+Average Conditional Probability Histogram=
+  true,false
+  3.4199974562767994E-7,0.9999996580002544
+Average Joint Probability Histogram=
+  true,false
+  -956.7949599886165,-935.3154590698713
+
+  Evaluating fold=1
+    Training. Fold= 0 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+    Compiling.

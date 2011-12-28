@@ -1,0 +1,7 @@
+[global]
+server.socket_port = 15863
+server.thread_pool = 10
+tools.sessions.on = True
+tools.staticdir.on = True
+tools.staticdir.dir = "/home/max/school/fydp/src/frontend/prototype"
+tools.staticdir.index = "index.html"

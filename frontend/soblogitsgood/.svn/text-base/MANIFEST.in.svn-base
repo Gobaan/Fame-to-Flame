@@ -1,0 +1,3 @@
+include soblogitsgood/config/deployment.ini_tmpl
+recursive-include soblogitsgood/public *
+recursive-include soblogitsgood/templates *

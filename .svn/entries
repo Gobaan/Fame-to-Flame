@@ -1,0 +1,95 @@
+10
+
+dir
+330
+svn+ssh://burstyn.ca/home/svn/fydp/src
+svn+ssh://burstyn.ca/home/svn/fydp
+
+
+
+2011-03-25T23:00:50.955167Z
+330
+shdwfeather
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9e287928-0ff1-4358-a5a8-85f23732abda
+
+crawler
+dir
+
+frontend
+dir
+
+parsers
+dir
+
+install.sh
+file
+
+
+
+
+2011-01-12T01:17:30.694168Z
+f5f6fd040424936738430be0a3bb2341
+2010-07-10T16:22:58.405304Z
+146
+gobi
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1107
+
+amazon_scraper
+dir
+
+n-grams
+dir
+
+updater
+dir
+
+oldsrc
+dir
+
+sentiment
+dir
+
+comment_splitter
+dir
+
+nltk_bayes
+dir
+
+client_webservice
+dir
+

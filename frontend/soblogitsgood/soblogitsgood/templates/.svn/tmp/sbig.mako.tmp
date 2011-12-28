@@ -1,0 +1,60 @@
+## This template outlines the main page layout
+
+<%inherit file="/sbig_base.mako" />
+<br/>
+<table width="1000">
+  <tr>
+  <td>
+  </td>
+  <td>
+      ${self.search_box()}
+      <br />
+      <br />
+  </td>
+  </tr>
+  <tr>
+    % if hasattr(c, "query"):
+      <td class="sidebar" width="300px">
+        <ul class="views">
+
+        <li>
+          <span class="icon" style="background-image:
+              url('images/list.png');"></span>
+        % if c.service == "custom":
+          <span class="modePicked">List</span>
+        % else:
+          <a href="custom?query=${c.query.replace(" ", "+")}">List</a>
+        % endif
+        </li>
+
+        <li>
+          <span class="icon" style="background-image:
+              url('images/polarize.png');"></span>
+        % if c.service == "polarize":
+          <span class="modePicked">Polarize</span>
+        % else:
+          <a href="polarize?query=${c.query.replace(" ", "+")}">Polarize</a>
+        % endif
+        </li>
+
+        <li>
+          <span class="icon" style="background-image:
+              url('images/analysis.png');"></span>
+        % if c.service == "analysis":
+          <span class="modePicked">Analysis</span>
+        % else:
+          <a href="analysis?query=${c.query.replace(" ", "+")}">Analysis</a>
+        % endif
+        </li>
+        </ul>
+
+        <div id="categories">
+        Categories<br>
+        </div>
+      </td>
+    % endif
+    <td class="content">
+      ${next.body()}
+    </td>
+  </tr>
+</table>
